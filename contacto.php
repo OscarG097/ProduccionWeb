@@ -96,13 +96,13 @@
             <form action="#">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Your name">
+                        <input type="text" placeholder="Nombre y Apellido">
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Your Email">
+                        <input type="text" placeholder="Tu email">
                     </div>
                     <div class="col-lg-12 text-center">
-                        <textarea placeholder="Your message"></textarea>
+                        <textarea placeholder="Tu Mensaje"></textarea>
                         <button type="submit" class="site-btn">Enviar Mensaje</button>
                     </div>
                 </div>

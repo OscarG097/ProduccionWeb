@@ -64,7 +64,7 @@
                             <!-- Favoritos -->
                             <li><a href="#"><i class="fa fa-heart"></i> <span> 0 </span></a></li>
                             <!-- Carrito -->
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span> 0 </span></a></li>
+                            <li><a href="carrito.php"><i class="fa fa-shopping-bag"></i> <span> 0 </span></a></li>
                         </ul>
                         <div class="header__cart__price">Total: <span>$0.00</span></div>
                     </div>

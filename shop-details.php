@@ -255,8 +255,3 @@
          <?php
         include_once('partes/footer.php')
         ?>
-
-
-</body>
-
-</html>

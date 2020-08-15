@@ -45,13 +45,13 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="#">Inicio</a></li>
+                            <li class="active"><a href="index.php">Inicio</a></li>
                             <li><a href="shop-grid.php">Productos</a></li>
                             <li><a href="#">Categorias</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="shop-details.php">Hombre</a></li>
-                                    <li><a href="shoping-cart.php">Mujer</a></li>
-                                    <li><a href="checkout.php">Niños</a></li>
+                                    <li><a href="#">Hombre</a></li>
+                                    <li><a href="#">Mujer</a></li>
+                                    <li><a href="#">Niños</a></li>
                                 </ul>
                             </li>
                             <li><a href="contacto.php">Contacto</a></li>

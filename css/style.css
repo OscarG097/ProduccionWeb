@@ -528,13 +528,13 @@ ol {
 	right: -12px;
 }
 
-.header__cart .header__cart__price {
+.header__cart .precio_carrito {
 	font-size: 14px;
 	color: #6f6f6f;
 	display: inline-block;
 }
 
-.header__cart .header__cart__price span {
+.header__cart .precio_carrito span {
 	color: #252525;
 	font-weight: 700;
 }
@@ -3057,12 +3057,12 @@ ol {
 		top: 0;
 		right: -12px;
 	}
-	.humberger__menu__cart .header__cart__price {
+	.humberger__menu__cart .precio_carrito {
 		font-size: 14px;
 		color: #6f6f6f;
 		display: inline-block;
 	}
-	.humberger__menu__cart .header__cart__price span {
+	.humberger__menu__cart .hprecio_carrito span {
 		color: #252525;
 		font-weight: 700;
 	}
@@ -3315,12 +3315,12 @@ ol {
 		top: 0;
 		right: -12px;
 	}
-	.humberger__menu__cart .header__cart__price {
+	.humberger__menu__cart .precio_carrito {
 		font-size: 14px;
 		color: #6f6f6f;
 		display: inline-block;
 	}
-	.humberger__menu__cart .header__cart__price span {
+	.humberger__menu__cart .precio_carrito span {
 		color: #252525;
 		font-weight: 700;
 	}

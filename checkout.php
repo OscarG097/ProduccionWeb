@@ -160,7 +160,6 @@
         </div>
     </section>
     <!-- Checkout Section End -->
-
         <?php
         include_once('partes/footer.php')
         ?>

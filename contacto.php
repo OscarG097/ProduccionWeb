@@ -110,6 +110,7 @@
         </div>
     </div>
     <!-- Contact Form End -->
+    <!-- Footer-->
         <?php
         include_once('partes/footer.php')
         ?>

@@ -211,7 +211,6 @@
         </div>
     </section>
     <!-- Related Blog Section End -->
-
         <?php
         include_once('partes/footer.php')
         ?>

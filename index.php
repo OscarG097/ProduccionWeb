@@ -121,7 +121,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix camisetas camperas">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix camisetas">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/productos/camiseta-2.jpg">
                             <ul class="featured__item__pic__hover">

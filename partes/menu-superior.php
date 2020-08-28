@@ -46,7 +46,7 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="index.php">Inicio</a></li>
-                            <li><a href="shop-grid.php">Productos</a></li>
+                            <li><a href="productos.php">Productos</a></li>
                             <li><a href="#">Categorias</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="#">Hombre</a></li>

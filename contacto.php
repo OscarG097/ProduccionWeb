@@ -101,9 +101,20 @@
                     <div class="col-lg-6 col-md-6">
                         <input type="text" placeholder="Tu email">
                     </div>
+                    <div class="col-lg-6 col-md-6">
+                        <input type="text" placeholder="Tu teléfono">
+                    </div>
+                        <!--div class="col-lg-6 col-md-6">
+                        <h4>Áreas de consulta</h4>
+                            <input type="radio" name="area" value="minorista" checked>Ventas Minoristas<br>
+                            <input type="radio" name="area" value="mayorista">Ventas Mayoristas<br>
+                            <input type="radio" name="area" value="envio">Dpto Envíos<br>
+                            <input type="radio" name="area" value="rrhh">Recursos Humanos
+                        </div-->
                     <div class="col-lg-12 text-center">
                         <textarea placeholder="Tu Mensaje"></textarea>
                         <button type="submit" class="site-btn">Enviar Mensaje</button>
+                        <div class="sidebar__item sidebar__item__color--option">
                     </div>
                 </div>
             </form>

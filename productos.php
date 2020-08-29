@@ -17,10 +17,9 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Organi Shop</h2>
+                        <h2>Productos</h2>
                         <div class="breadcrumb__option">
-                            <a href="./index.php">Home</a>
-                            <span>Shop</span>
+                            <span>Nuestros Productos</span>
                         </div>
                     </div>
                 </div>
@@ -36,25 +35,24 @@
                 <div class="col-lg-3 col-md-5">
                     <div class="sidebar">
                         <div class="sidebar__item">
-                            <h4>Department</h4>
+                            <h4>Productos</h4>
                             <ul>
-                                <li><a href="#">Fresh Meat</a></li>
-                                <li><a href="#">Vegetables</a></li>
-                                <li><a href="#">Fruit & Nut Gifts</a></li>
-                                <li><a href="#">Fresh Berries</a></li>
-                                <li><a href="#">Ocean Foods</a></li>
-                                <li><a href="#">Butter & Eggs</a></li>
-                                <li><a href="#">Fastfood</a></li>
-                                <li><a href="#">Fresh Onion</a></li>
-                                <li><a href="#">Papayaya & Crisps</a></li>
-                                <li><a href="#">Oatmeal</a></li>
+                                <li><a href="#">Botines</a></li>
+                                <li><a href="#">Camisetas</a></li>
+                                <li><a href="#">Joggins</a></li>
+                                <li><a href="#">Camperas</a></li>
+                                <li><a href="#">Buzos</a></li>
+                                <li><a href="#">Medias</a></li>
+                                <li><a href="#">Pelotas</a></li>
+                                <li><a href="#">Guantes</a></li>
+                                <li><a href="#">Accesorios</a></li>
                             </ul>
                         </div>
                         <div class="sidebar__item">
-                            <h4>Price</h4>
+                            <h4>Rango Precio</h4>
                             <div class="price-range-wrap">
                                 <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                    data-min="10" data-max="540">
+                                    data-min="100" data-max="5000">
                                     <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
                                     <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
                                     <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
@@ -68,74 +66,47 @@
                             </div>
                         </div>
                         <div class="sidebar__item sidebar__item__color--option">
-                            <h4>Colors</h4>
-                            <div class="sidebar__item__color sidebar__item__color--white">
-                                <label for="white">
-                                    White
-                                    <input type="radio" id="white">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__color sidebar__item__color--gray">
-                                <label for="gray">
-                                    Gray
-                                    <input type="radio" id="gray">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__color sidebar__item__color--red">
-                                <label for="red">
-                                    Red
-                                    <input type="radio" id="red">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__color sidebar__item__color--black">
-                                <label for="black">
-                                    Black
-                                    <input type="radio" id="black">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__color sidebar__item__color--blue">
-                                <label for="blue">
-                                    Blue
-                                    <input type="radio" id="blue">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__color sidebar__item__color--green">
-                                <label for="green">
-                                    Green
-                                    <input type="radio" id="green">
-                                </label>
-                            </div>
+                            <h4>Marcas</h4>
+                            <input type="checkbox" name="marca" value="1"> Adidas
+                            <br>
+                            <input type="checkbox" name="marca" value="2"> Nike
+                            <br>
+                            <input type="checkbox" name="marca" value="3"> Reebok
+                            <br>
+                            <input type="checkbox" name="marca" value="4"> Topper
+                            <br>
+                            <input type="checkbox" name="marca" value="5"> Umbro
                         </div>
                         <div class="sidebar__item">
-                            <h4>Popular Size</h4>
-                            <div class="sidebar__item__size">
-                                <label for="large">
-                                    Large
-                                    <input type="radio" id="large">
+                            <h4>Género</h4>
+                            <div class="sidebar__item__deporte">
+                                <label for="deporte">
+                                    Fútbol
+                                    <input type="radio" id="futbol">
                                 </label>
                             </div>
-                            <div class="sidebar__item__size">
-                                <label for="medium">
-                                    Medium
-                                    <input type="radio" id="medium">
+                            <div class="sidebar__item__deporte">
+                                <label for="deporte">
+                                    Boxeo
+                                    <input type="radio" id="boxeo">
                                 </label>
                             </div>
-                            <div class="sidebar__item__size">
-                                <label for="small">
-                                    Small
-                                    <input type="radio" id="small">
+                            <div class="sidebar__item__deporte">
+                                <label for="deporte">
+                                    Jockey
+                                    <input type="radio" id="jockey">
                                 </label>
                             </div>
-                            <div class="sidebar__item__size">
-                                <label for="tiny">
-                                    Tiny
-                                    <input type="radio" id="tiny">
+                            <div class="sidebar__item__deporte">
+                                <label for="deporte">
+                                    Tenis
+                                    <input type="radio" id="tenis">
                                 </label>
                             </div>
                         </div>
                         <div class="sidebar__item">
                             <div class="latest-product__text">
-                                <h4>Latest Products</h4>
+                                <h4>Últimos productos</h4>
                                 <div class="latest-product__slider owl-carousel">
                                     <div class="latest-prdouct__slider__item">
                                         <a href="#" class="latest-product__item">

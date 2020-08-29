@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------
-[Table of contents]
+[Tabla de contenidos]
 
 1.  Template default CSS
 	1.1	Variables
@@ -7,14 +7,14 @@
 	1.3	Flexbox
 	1.4	Reset
 2.  Helper Css
-3.  Header Section
+3.  Seccion Header
 4.  Hero Section
 5.  Service Section
-6.  Categories Section
+6.  Seccion de Categorias
 7.  Featured Section
 8.  Latest Product Section
-9.  Contact
-10.  Footer Style
+9.  Contacto
+10. Estilo Footer
 -------------------------------------------------------------------*/
 
 /*----------------------------------------*/
@@ -1121,13 +1121,13 @@ ol {
 	top: 13px;
 	height: 1px;
 	width: 5px;
-	background: #dd2222;
+	background: #078527;
 	content: "";
 }
 
 .price-range-wrap .range-slider .price-input input {
 	font-size: 16px;
-	color: #dd2222;
+	color: #078527;
 	font-weight: 700;
 	max-width: 20%;
 	border: none;
@@ -1157,12 +1157,12 @@ ol {
 }
 
 .price-range-wrap .price-range .ui-slider-range {
-	background: #dd2222;
+	background: #078527;
 	border-radius: 0;
 }
 
 .price-range-wrap .price-range .ui-slider-range.ui-corner-all.ui-widget-header:last-child {
-	background: #dd2222;
+	background: #078527;
 }
 
 .sidebar__item__color {
@@ -1219,13 +1219,13 @@ ol {
 	border-radius: 50%;
 }
 
-.sidebar__item__size {
+.sidebar__item__deporte {
 	display: inline-block;
 	margin-right: 16px;
 	margin-bottom: 10px;
 }
 
-.sidebar__item__size label {
+.sidebar__item__deporte label {
 	font-size: 12px;
 	color: #6f6f6f;
 	display: inline-block;
@@ -1235,7 +1235,7 @@ ol {
 	margin-bottom: 0;
 }
 
-.sidebar__item__size label input {
+.sidebar__item__deporte label input {
 	position: absolute;
 	visibility: hidden;
 }
@@ -1280,7 +1280,7 @@ ol {
 .product__discount__item__pic .product__discount__percent {
 	height: 45px;
 	width: 45px;
-	background: #dd2222;
+	background: #078527;
 	border-radius: 50%;
 	font-size: 14px;
 	color: #ffffff;
@@ -1687,13 +1687,13 @@ ol {
 }
 
 .product__details__text .product__details__rating span {
-	color: #dd2222;
+	color: #078527;
 	margin-left: 4px;
 }
 
 .product__details__text .product__details__price {
 	font-size: 30px;
-	color: #dd2222;
+	color: #078527;
 	font-weight: 600;
 	margin-bottom: 15px;
 }
@@ -1736,7 +1736,7 @@ ol {
 }
 
 .product__details__text ul li span samp {
-	color: #dd2222;
+	color: #078527;
 }
 
 .product__details__text ul li .share {
@@ -2046,7 +2046,7 @@ ol {
 
 .shoping__checkout ul li span {
 	font-size: 18px;
-	color: #dd2222;
+	color: #078527;
 	float: right;
 }
 
@@ -2106,7 +2106,7 @@ ol {
 }
 
 .checkout__input p span {
-	color: #dd2222;
+	color: #078527;
 }
 
 .checkout__input input {
@@ -2250,7 +2250,7 @@ ol {
 
 .checkout__order .checkout__order__total span {
 	float: right;
-	color: #dd2222;
+	color: #078527;
 }
 
 .checkout__order button {

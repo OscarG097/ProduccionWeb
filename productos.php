@@ -67,42 +67,25 @@
                         </div>
                         <div class="sidebar__item sidebar__item__color--option">
                             <h4>Marcas</h4>
-                            <input type="checkbox" name="marca" value="1"> Adidas
-                            <br>
-                            <input type="checkbox" name="marca" value="2"> Nike
-                            <br>
-                            <input type="checkbox" name="marca" value="3"> Reebok
-                            <br>
-                            <input type="checkbox" name="marca" value="4"> Topper
-                            <br>
-                            <input type="checkbox" name="marca" value="5"> Umbro
+                                <input type="checkbox" name="marca" value="1" autocomplete="off"> Adidas
+                                <br>
+                                <input type="checkbox" name="marca" value="2" autocomplete="off"> Nike
+                                <br>
+                                <input type="checkbox" name="marca" value="3" autocomplete="off"> Reebok
+                                <br>
+                                <input type="checkbox" name="marca" value="4" autocomplete="off"> Topper
+                                <br>
+                                <input type="checkbox" name="marca" value="5" autocomplete="off"> Everlast
                         </div>
                         <div class="sidebar__item">
-                            <h4>Género</h4>
-                            <div class="sidebar__item__deporte">
-                                <label for="deporte">
-                                    Fútbol
-                                    <input type="radio" id="futbol">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__deporte">
-                                <label for="deporte">
-                                    Boxeo
-                                    <input type="radio" id="boxeo">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__deporte">
-                                <label for="deporte">
-                                    Jockey
-                                    <input type="radio" id="jockey">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__deporte">
-                                <label for="deporte">
-                                    Tenis
-                                    <input type="radio" id="tenis">
-                                </label>
-                            </div>
+                             <h4>Deportes</h4>
+                                <input type="checkbox" name="deporte" value="F" autocomplete="off"> Futbol
+                                <br>
+                                <input type="checkbox" name="deporte" value="J" autocomplete="off"> Jockey
+                                <br>
+                                <input type="checkbox" name="deporte" value="T" autocomplete="off"> Tenis
+                                <br>
+                                <input type="checkbox" name="deporte" value="B" autocomplete="off"> Boxeo
                         </div>
                         <div class="sidebar__item">
                             <div class="latest-product__text">

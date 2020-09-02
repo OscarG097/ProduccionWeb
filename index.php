@@ -185,7 +185,7 @@
                             <div class="latest-prdouct__slider__item">
                                 <a href="#" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="img/productos/accesorio-4.jpg" alt="">
+                                        <img src="img/productos/mini-accesorio-3.jpg" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Pelota Tsubasa League</h6>
@@ -194,7 +194,7 @@
                                 </a>
                                 <a href="#" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="img/productos/botin-3.jpg" alt="">
+                                        <img src="img/productos/mini-botin-2.jpg" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Botin Nike Phantom VSN 2 Pro</h6>
@@ -203,7 +203,7 @@
                                 </a>
                                 <a href="#" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="img/productos/camiseta-3.jpg" alt="">
+                                        <img src="img/productos/mini-camiseta-1" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Camiseta Adidas Manchester United '20</h6>
@@ -249,7 +249,7 @@
                             <div class="latest-prdouct__slider__item">
                                 <a href="#" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="img/productos/accesorio-5.jpg" alt="">
+                                        <img src="img/productos/mini-accesorio-1.jpg" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Pelota Adidas Unifornia '20</h6>
@@ -258,7 +258,7 @@
                                 </a>
                                 <a href="#" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="img/productos/accesorio-6.jpg" alt="">
+                                        <img src="img/productos/mini-accesorio-2.jpg" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Pelota Adidas Argentum '19</h6>
@@ -267,7 +267,7 @@
                                 </a>
                                 <a href="#" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="img/productos/botin-4.jpg" alt="">
+                                        <img src="img/productos/mini-botin-1.jpg" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Botines Adidas Nemeziz 19+</h6>

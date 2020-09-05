@@ -11,7 +11,7 @@
         include_once('partes/menu-costado.php')
         ?>
 
-    <!-- Featured Section Begin -->
+    <!-- Destacados Empieza -->
     <section class="featured spad">
         <div class="container">
             <div class="row">
@@ -22,7 +22,7 @@
                     <div class="featured__controls">
                         <ul>
                             <li class="active" data-filter="*">Todos</li>
-                            <li data-filter=".botines">Botines</li>
+                            <li data-filter=".calzado">Calzado</li>
                             <li data-filter=".camisetas">Camisetas</li>
                             <li data-filter=".camperas">Camperas</li>
                             <li data-filter=".accesorios">Accesorios</li>
@@ -31,9 +31,9 @@
                 </div>
             </div>
             <div class="row featured__filter">
-                <div class="col-lg-3 col-md-4 col-sm-6 mix botines">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix calzado">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/botin-1.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/productos/calzado-1.jpg">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-share"></i></a></li>
@@ -76,9 +76,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix botines">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix calzado">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/botin-2.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/productos/calzado-2.jpg">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-share"></i></a></li>
@@ -151,10 +151,70 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix accesorios">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/productos/accesorio-4.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-share"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Guantes Adidas BearBox Y</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix calzado">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/productos/calzado-3.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-share"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Botas Boxeo Reebok Master</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix calzado">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/productos/calzado-4.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-share"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Calzado Adidas Hockey Narma</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix camperas">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/productos/campera-2.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-share"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Campera Nike WindRunner</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-- Featured Section End -->
+    <!-- Destacados Termina -->
 
     <!-- Banner Begin -->
     <div class="banner">
@@ -194,7 +254,7 @@
                                 </a>
                                 <a href="#" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="img/productos/mini-botin-2.jpg" alt="">
+                                        <img src="img/productos/mini-calzado-2.jpg" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Botin Nike Phantom VSN 2 Pro</h6>
@@ -203,7 +263,7 @@
                                 </a>
                                 <a href="#" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="img/productos/mini-camiseta-1" alt="">
+                                        <img src="img/productos/mini-camiseta-1.jpg" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Camiseta Adidas Manchester United '20</h6>
@@ -267,7 +327,7 @@
                                 </a>
                                 <a href="#" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="img/productos/mini-botin-1.jpg" alt="">
+                                        <img src="img/productos/mini-calzado-1.jpg" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Botines Adidas Nemeziz 19+</h6>

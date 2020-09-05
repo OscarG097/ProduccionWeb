@@ -39,12 +39,9 @@
                             <ul>
                                 <li><a href="#">Botines</a></li>
                                 <li><a href="#">Camisetas</a></li>
-                                <li><a href="#">Joggins</a></li>
+                                <li><a href="#">Shorts</a></li>
                                 <li><a href="#">Camperas</a></li>
                                 <li><a href="#">Buzos</a></li>
-                                <li><a href="#">Medias</a></li>
-                                <li><a href="#">Pelotas</a></li>
-                                <li><a href="#">Guantes</a></li>
                                 <li><a href="#">Accesorios</a></li>
                             </ul>
                         </div>

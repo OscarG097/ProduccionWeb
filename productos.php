@@ -97,10 +97,10 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-5">
                                 <div class="filter__sort">
-                                    <span>Ordenar por</span>
+                                    <span>Nombre</span>
                                     <select>
-                                        <option value="0">Nombre</option>
-                                        <option value="0">Precio</option>
+                                        <option value="0">A-Z</option>
+                                        <option value="0">Z-A</option>
                                     </select>
                                 </div>
                             </div>

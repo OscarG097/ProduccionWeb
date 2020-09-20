@@ -11,3 +11,7 @@ Se hicieron cambios en la parte de contacto, agregado de lista desplegable
 Se crearon arrays para los productos (Todavía no estan en uso)
 Se agregaron productos para utilizarlos como destacados
 Se hicieron cambios en el detalle de ordenado de productos (A->Z / Z->A)
+
+--20/09
+Borrado de include de contacto.php apuntaba a una parte del menu que no exite
+Borrado de blog-details-php quedo del template original

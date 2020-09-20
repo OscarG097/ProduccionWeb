@@ -4,10 +4,6 @@
 
 <body>
         <?php
-        include_once('partes/menus.php')
-        ?>
-
-        <?php
         include_once('partes/menu-superior.php')
         ?>
 

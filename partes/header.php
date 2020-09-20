@@ -1,3 +1,17 @@
+<?php
+require_once('partes/db_con.php');
+require_once('clases/productos.php');
+
+try {        
+	$con = new PDO('mysql:host='.$hostname.';dbname='.$database.';port='.$puerto, $username, $password);
+}
+catch (PDOException $e) {
+	print "¡Error!: " . $e->getMessage();
+	die();
+}
+
+$Productos = new Productos($con);
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 

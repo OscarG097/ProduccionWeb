@@ -23,7 +23,7 @@
 	</ul>
     </div>
 <div class="well well-small">
-	<!-- marcas -->
+	<!-- Marcas -->
 	<h4>Marcas</h4>
 	<ul class="nav flex-column">
 		<?php

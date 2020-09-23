@@ -57,16 +57,12 @@
                                 </div>
                             </div>
                         </div>
-                       
-                        
                     </div>
                 </div>
 
-
-
                 <div class="col-md-9 col-sm-7">
                     <div class="filter__item">
-                        <div class="row">
+                        <div class="row-fluid">
                             <div class="col-md-4 col-sm-5">
                                 <div class="filter__sort">
                                     <span>Nombre</span>
@@ -76,23 +72,17 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4">
+                            <div class="col-md-12 col-sm-12">
                                 <div class="filter__found">
                                     <h6><span><!--TOMAR CANTIDAD DE PRODUCTOS--></span> Productos Encontrados</h6>
                                 </div>
                             </div>                      
-                            <div class="col-md-4 col-sm-3">
-                                <div class="filter__option">
-                                    <span class="icon_grid-2x2"></span>
-                                    <span class="icon_ul"></span>
-                                </div>
-                            </div>
-                    </div>
+                        </div>
 
                   
-                        <div class="col-md-12 col-sm-7">
+                        <div class="col-md-6 col-sm-7">
                         <div class="row-fluid">
-                        <div class="col-md-4 col-sm-5">
+                        <div class="col-md-6 col-sm-7">
 
 
                             <div class="product__item">

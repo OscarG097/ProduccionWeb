@@ -57,34 +57,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="sidebar__item sidebar__item__color--option">
-                            <h4>Marcas</h4>
-                                <input type="checkbox" name="marca" value="1" autocomplete="off"> Adidas
-                                <br>
-                                <input type="checkbox" name="marca" value="2" autocomplete="off"> Nike
-                                <br>
-                                <input type="checkbox" name="marca" value="3" autocomplete="off"> Reebok
-                                <br>
-                                <input type="checkbox" name="marca" value="4" autocomplete="off"> Topper
-                                <br>
-                                <input type="checkbox" name="marca" value="5" autocomplete="off"> Everlast
-                            <div>
-                                <button type="submit" class="site-btn">Aplicar</button>
-                            </div>
-                        </div>
-                        <div class="sidebar__item">
-                             <h4>Deportes</h4>
-                                <input type="checkbox" name="deporte" value="F" autocomplete="off"> Futbol
-                                <br>
-                                <input type="checkbox" name="deporte" value="J" autocomplete="off"> Jockey
-                                <br>
-                                <input type="checkbox" name="deporte" value="T" autocomplete="off"> Tenis
-                                <br>
-                                <input type="checkbox" name="deporte" value="B" autocomplete="off"> Boxeo
-                            <div>
-                                <button type="submit" class="site-btn">Aplicar</button>
-                            </div>
-                        </div>
+                       
+                        
                     </div>
                 </div>
 

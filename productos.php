@@ -89,7 +89,7 @@
                                     foreach($Productos->getProductos($_GET) as $prod){
                                     ?>
                                               		
-                                                <img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt="">
+                <a href="productos_detalle.php?prod=<?php echo $prod['id']?>"><img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt=""></a>
                                             
                                                 <h4><?php echo $prod['nombre']?></h4>
                                                 <h5><?php echo $prod['modelo']?></h5>

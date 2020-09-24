@@ -7,7 +7,7 @@
 			require_once('clases/categorias.php');
 			$Cat = new Categorias($con);
 
-			foreach($Cat->getCatorias() as $cat){ 
+			foreach($Cat->getCategorias() as $cat){ 
 		?>
 			<li>
 				<a href="productos.php?cat=<?php echo $cat['id']?>&marca=<?php echo (isset($_GET['marca'])?$_GET['marca']:'') ?>">

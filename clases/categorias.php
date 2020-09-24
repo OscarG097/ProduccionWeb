@@ -7,7 +7,7 @@
             $this->con = $con;
         }
 
-        public function getCatorias(){
+        public function getCategorias(){
             $query = "SELECT * FROM categorias";
             return $this->con->query($query);
         }

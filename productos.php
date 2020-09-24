@@ -7,10 +7,6 @@
         include_once('partes/menu-superior.php')
         ?>
 
-        <?php
-        include_once('partes/menu-superior.php')
-        ?>
-
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="img/banner.jpg">
         <div class="container">

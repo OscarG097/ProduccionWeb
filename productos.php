@@ -24,7 +24,7 @@
     </section>
     <!-- Breadcrumb Section End -->
 
-    <!-- Product Section Begin -->
+
     <section class="product spad">
         <div class="container">
             <div class="row">
@@ -56,10 +56,10 @@
                     </div>
                 </div>
 
-                <div class="col-md-9 col-sm-7">
+                <div class="col-lg-9 col-sm-7"> <!--A BER QUE HACE ESTO-->
                     <div class="filter__item">
                         <div class="row-fluid">
-                            <div class="col-md-4 col-sm-5">
+                            <div class="col-md-2 col-sm-5">
                                 <div class="filter__sort">
                                     <span>Nombre</span>
                                     <select>

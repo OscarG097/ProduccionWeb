@@ -56,7 +56,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-9 col-sm-7"> <!--A BER QUE HACE ESTO-->
+                <div class="col-lg-9 col-sm-7">
                     <div class="filter__item">
                         <div class="row-fluid">
                             <div class="col-md-2 col-sm-5">
@@ -76,42 +76,28 @@
                         </div>
 
                   
-                        <div class="col-md-6 col-sm-7">
-                        <div class="row-fluid">
-                        <div class="col-md-6 col-sm-7">
-
-
-                            <div class="product__item">
-                                <div class="product__item__text">
-                             
-                                
-                                    <?php
-                                    foreach($Productos->getProductos($_GET) as $prod){
-                                    ?>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="row">
+                        <!--<div class="col-md-3 col-sm-7">-->
+                                <div class="product__item">
+                                    <div class="product__item__text">
+                                        <?php
+                                        foreach($Productos->getProductos($_GET) as $prod){
+                                        ?>
                                               		
-                <a href="productos_detalle.php?prod=<?php echo $prod['id']?>"><img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt=""></a>
-                                            
+                                        <a href="productos_detalle.php?prod=<?php echo $prod['id']?>"><img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt=""></a>
                                                 <h4><?php echo $prod['nombre']?></h4>
                                                 <h5><?php echo $prod['modelo']?></h5>
                                                 <h7>$ <?php echo $prod['precio']?></strong></h7>
 										        <p>Stock: <?php echo $prod['cantidad']?></p>
                                                 <?php } ?>
-
                                      </div>
-                                  </div>      
-                                </div>
-                                
-
-                            </div>
+                                </div>      
+                         <!--</div>-->
                         </div>
-                        
-                        
-                       
                     </div>
-                    
-                </div>
-            
-    
+                </div>   
+            </div>
     </section>
     <!-- Product Section End -->
 

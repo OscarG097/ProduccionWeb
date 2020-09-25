@@ -97,22 +97,20 @@
                                     }
                                 }
                                     ?>
-                    <li class="col-md-12">
-									<div class="thumbnail">
-										<h3 style="color:black;"><?php echo $prod['nombre']?></h3>
-									</li>	
+                        <li class="col-md-12">
+							<div class="thumbnail">
+								<h3 style="color:black;"><?php echo $prod['nombre']?></h3>
+						</li>	
 
-                                    <li class="col-lg-12 col-sm-6">
-									<div class="thumbnail">
-										
-                                    <img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt="" width="253" height="253">	
-                                    						
-                                            <button type="submit" class="site-btn">Añadir al carrito</button>
-											<form action="/action_page.php">
+                        <li class="col-lg-12 col-sm-6">
+							<div class="thumbnail">
+                               <img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt="" width="253" height="253">	
+                                    <button type="submit" class="site-btn">Añadir al carrito</button>
+							    		<form action="/action_page.php">
   												<label style="color:black;" for="quantity">Cantidad (máx 5)</label>
   												<input style="color:black;" type="number" id="quantity" name="quantity" min="1" max="5">
 										</form>
-									</li>	
+						</li>	
 
                                     <li class="col-lg-12 col-sm-6">
 									<div class="thumbnail">

@@ -30,15 +30,15 @@ class Productos{
         if (!empty($filtro['order'])) {
 
             if ($filtro['order'] == 'AZ') {
-                $query .= 'ORDER BY nombre ASC';
+                $query .= ' ORDER BY nombre ASC';
             }elseif ($filtro['order'] == 'ZA') {
-                $query .= 'ORDER BY nombre DESC';
+                $query .= ' ORDER BY nombre DESC';
             }else{
-                $query .= 'ORDER BY destacado ASC';
+                $query .= ' ORDER BY destacado ASC';
             }   
 
         }else{
-            $query .= 'ORDER BY destacado ASC';
+            $query .= ' ORDER BY destacado ASC';
         }
 
 

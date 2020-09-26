@@ -86,7 +86,7 @@
                 <div class="col-lg-9 col-sm-7">
                         <div class="col-md-12 col-sm-7">
                         <div class="row-fluid">
-                        <div class="col-md-12">
+                        <div class="col-md-6 col-sm-7">
                             <div class="product__item">
                                 <div class="product__item__text">
                             

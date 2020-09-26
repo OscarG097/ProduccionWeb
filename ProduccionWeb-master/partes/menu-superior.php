@@ -42,24 +42,31 @@
                         <a href="index.php"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
-                <div class="col-lg-7 d-flex align-items-center d-flex justify-content-around">
-                    <nav class= "header__menu">
+                <div class="col-lg-6">
+                    <nav class="header__menu">
                         <ul>
-                            <li class=""><a href="index.php">Inicio</a></li>
+                            <li class="active"><a href="index.php">Inicio</a></li>
                             <li><a href="productos.php">Productos</a></li>
-                            
+                            <li><a href="#">Categorias</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="#">Hombre</a></li>
+                                    <li><a href="#">Mujer</a></li>
+                                    <li><a href="#">Niños</a></li>
+                                </ul>
+                            </li>
                             <li><a href="contacto.php">Contacto</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="col-lg-2 d-flex align-items-center d-flex justify-content-around">
+                <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            
+                            <!-- Favoritos -->
+                            <li><a href="#"><i class="fa fa-heart"></i> <span> 0 </span></a></li>
                             <!-- Carrito -->
                             <li><a href="carrito.php"><i class="fa fa-shopping-bag"></i> <span> 0 </span></a></li>
                         </ul>
-                        <div class="d-flex justify-content-center header__cart__price">Total: <span>$0.00</span></div>
+                        <div class="header__cart__price">Total: <span>$0.00</span></div>
                     </div>
                 </div>
             </div>

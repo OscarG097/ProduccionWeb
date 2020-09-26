@@ -59,21 +59,13 @@
                 <div class="col-lg-9 col-sm-7">
                     <div class="filter__item">
                         <div class="row-fluid">
-                            <div class="col-md-2 col-sm-5">
-                                <div class="filter__sort">
-                                    <span>Nombre</span>
-                                    <select>
-                                        <option value="0">A-Z</option>
-                                        <option value="0">Z-A</option>
-                                    </select>
-                                </div>
-                            </div>
                             <div class="col-md-12 col-sm-12">
                                 <div class="filter__found">
-                                    <h6><span><!--TOMAR CANTIDAD DE PRODUCTOS--></span> Productos Encontrados</h6>
+                                    <h5><span><!--TOMAR CANTIDAD DE PRODUCTOS--></span> Productos Encontrados</h5>
                                 </div>
-                            </div>                      
-                        </div>
+                            </div>   
+                        </div>                       
+                    </div>
 
                   
                     <div class="col-md-3 col-sm-3">
@@ -90,7 +82,7 @@
                                                 <h5><?php echo $prod['modelo']?></h5>
                                                 <h7>$ <?php echo $prod['precio']?></strong></h7>
 										        <p>Stock: <?php echo $prod['cantidad']?></p>
-                                                <?php } ?>
+                                        <?php } ?>
                                      </div>
                                 </div>      
                          <!--</div>-->

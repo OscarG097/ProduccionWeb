@@ -25,7 +25,8 @@
     </div>
 
 	<!-- Marcas -->
-	<div class="well well-small">	
+	<div class="filter__item">
+		<div class="well well-small">	
 		<h4>Marcas</h4>
 		<ul class="nav flex-column">
 			<?php
@@ -38,6 +39,7 @@
 			<li><a href="productos.php?marca=&cat=<?php echo isset($_GET['cat'])?$_GET['cat']:''?>&order=<?php echo isset($_GET['order'])?$_GET['order']:''?>"><span class="icon-chevron-right"></span>Todos</a></li>
 
 		</ul>
+		</div>
 	</div>
 
 	<!-- Ordenamiento -->

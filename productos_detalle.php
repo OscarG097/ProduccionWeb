@@ -103,7 +103,7 @@
 						</li>	
 
                         <li class="col-lg-12 col-sm-6">
-							<div class="thumbnail">
+							<div >
                                <img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt="" width="253" height="253">	
                                     <button type="submit" class="site-btn">Añadir al carrito</button>
 							    		<form action="/action_page.php">

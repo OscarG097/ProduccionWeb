@@ -14,6 +14,7 @@
     <!-- Destacados Empieza -->
     <section class="featured spad">
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
@@ -22,15 +23,20 @@
                     <div class="featured__controls">
                         <ul>
                             <li class="active" data-filter="*">Todos</li>
+                            <!--
                             <li data-filter=".calzado">Calzado</li>
                             <li data-filter=".camisetas">Camisetas</li>
                             <li data-filter=".camperas">Camperas</li>
                             <li data-filter=".accesorios">Accesorios</li>
+                            -->
                         </ul>
                     </div>
                 </div>
             </div>
+
             <div class="row featured__filter">
+
+                <!-- ¡CODIGO DE EJEMPLO!
                 <div class="col-lg-3 col-md-4 col-sm-6 mix calzado">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/productos/calzado-1.jpg">
@@ -46,173 +52,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix accesorios">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/accesorio-1.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Guantes Nike GK Spyne Pro</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
+                -->
+                <?php
+                    foreach($Productos->getProductosHomeRandom($_GET) as $prod){
+                ?>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix calzado">
+                            
+                        <div class="featured__item">
+                                        
+                            <div class="featured__item__text">   
+                                            
+                                <a href="productos_detalle.php?prod=<?php echo $prod['id']?>"><img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt=""></a>
+                                <h4><?php echo $prod['nombre']?></h4>
+                                <h5><?php echo $prod['modelo']?></h5>
+                                <h7>$ <?php echo $prod['precio']?></strong></h7>
+                                <p>Stock: <?php echo $prod['cantidad']?></p>
+                                        
+                            </div>
+                                        
+                        </div>                                  
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix camisetas">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/camiseta-1.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Camiseta Adidas Juventus '20</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix calzado">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/calzado-2.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Botin Nike Mercurial Superfly</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix camperas">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/campera-1.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Campera Adidas Bayern Munich '20</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix accesorios">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/accesorio-2.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Canillera Nike Mercurial Lite</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix camisetas">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/camiseta-2.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Camiseta Nike Barcelona '20 </a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix accesorios">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/accesorio-3.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Pelota Adidas UCL Final '20</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix accesorios">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/accesorio-4.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Guantes Adidas BearBox Y</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix calzado">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/calzado-3.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Botas Boxeo Reebok Master</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix calzado">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/calzado-4.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Calzado Adidas Hockey Narma</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix camperas">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/productos/campera-2.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Campera Nike WindRunner</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
+
+
+
             </div>
+
         </div>
+
     </section>
     <!-- Destacados Termina -->
 

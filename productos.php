@@ -24,11 +24,12 @@
     </section>
     <!-- Breadcrumb Section End -->
 
-    <section >
-    <br>
-    <br>
+    <section class="product spad">
+
         <div class="container">
+
             <div class="row">
+            
                 <div class="col-md-3 col-sm-5">
                     <div class="sidebar">
                         <div class="sidebar__item">
@@ -60,64 +61,34 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-3">
-                        <div class="row">
-                                <div class="product__item">
-                                    <div class="product__item__text">
-                                        <?php
-                                        foreach($Productos->getProductos($_GET) as $prod){
-                                        ?>
-                                              		
-                                        <a href="productos_detalle.php?prod=<?php echo $prod['id']?>"><img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt=""></a>
-                                                <h4><?php echo $prod['nombre']?></h4>
-                                                <h5><?php echo $prod['modelo']?></h5>
-                                                <h7>$ <?php echo $prod['precio']?></strong></h7>
-										        <p>Stock: <?php echo $prod['cantidad']?></p>
-                                                <?php } ?>
-                                     </div>
-                                </div>      
-                        </div>
-                    </div>
+                <?php
+                    foreach($Productos->getProductos($_GET) as $prod){
+                ?>
                     <div class="col-md-3 col-sm-3">
-                        <div class="row">
-                                <div class="product__item">
-                                    <div class="product__item__text">
-                                        <?php
-                                        foreach($Productos->getProductos($_GET) as $prod){
-                                        ?>
-                                              		
+                            <div class="row">
+                                    <div class="product__item">
+
+                                    <div class="product__item__pic set-bg">
                                         <a href="productos_detalle.php?prod=<?php echo $prod['id']?>"><img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt=""></a>
-                                                <h4><?php echo $prod['nombre']?></h4>
-                                                <h5><?php echo $prod['modelo']?></h5>
-                                                <h7>$ <?php echo $prod['precio']?></strong></h7>
-										        <p>Stock: <?php echo $prod['cantidad']?></p>
-                                                <?php } ?>
-                                     </div>
-                                </div>      
-                        </div>
+                                    </div>
+                                        <div class="product__item__text"> 
+                                            
+                                            <h4><?php echo $prod['nombre']?></h4>
+                                            <h5><?php echo $prod['modelo']?></h5>
+                                            <h7>$ <?php echo $prod['precio']?></strong></h7>
+                                            <p>Stock: <?php echo $prod['cantidad']?></p>
+                                        
+                                        </div>
+                                        
+                                    </div>      
+                            </div>
                     </div>
-                    <div class="col-md-3 col-sm-3">
-                        <div class="row">
-                                <div class="product__item">
-                                    <div class="product__item__text">
-                                        <?php
-                                        foreach($Productos->getProductos($_GET) as $prod){
-                                        ?>
-                                              		
-                                        <a href="productos_detalle.php?prod=<?php echo $prod['id']?>"><img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt=""></a>
-                                                <h4><?php echo $prod['nombre']?></h4>
-                                                <h5><?php echo $prod['modelo']?></h5>
-                                                <h7>$ <?php echo $prod['precio']?></strong></h7>
-										        <p>Stock: <?php echo $prod['cantidad']?></p>
-                                                <?php } ?>
-                                     </div>
-                                </div>      
-                        </div>
-                    </div>
+                <?php } ?>
 
                     
-
-                 </div>
+                
+            </div>
+            
         </div>
 
                 

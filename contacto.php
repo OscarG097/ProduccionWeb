@@ -1,3 +1,5 @@
+        <!--Págima en desarrollo-->
+
         <?php
         include_once('partes/header.php')
         ?>	
@@ -62,7 +64,7 @@
     </section>
     <!-- Contact Section End -->
 
-    <!-- Map Begin -->
+    <!-- Empieza Mapa -->
     <div class="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1952.6659502744992!2d-58.41086868850988!3d-34.60467747026064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1597466608645!5m2!1ses!2sar" 
             height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -77,9 +79,9 @@
             </div>
         </div>
     </div>
-    <!-- Map End -->
+    <!-- Termina Mapa -->
 
-    <!-- Contact Form Begin -->
+    <!-- Formulario de contacto -->
     <div class="contact-form spad">
         <div class="container">
             <div class="row">
@@ -92,13 +94,13 @@
             <form action="#">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Nombre y Apellido">
+                        <input type="text" name="nombre_apellido" placeholder="Nombre y Apellido">
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Tu email">
+                        <input type="text" name="email" placeholder="Tu email">
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Tu teléfono">
+                        <input type="text" name="telefono" placeholder="Tu teléfono">
                     </div>
                         <div class="col-lg-6 col-md-4">
                         <select name="area">
@@ -110,7 +112,7 @@
                         </select>
                         </div>
                     <div class="col-lg-12 text-center">
-                        <textarea placeholder="Tu Mensaje"></textarea>
+                        <textarea name="comentario" placeholder="Tu Mensaje"></textarea>
                         <button type="submit" class="site-btn">Enviar Mensaje</button>
                         <div class="sidebar__item sidebar__item__color--option">
                     </div>
@@ -118,7 +120,8 @@
             </form>
         </div>
     </div>
-    <!-- Contact Form End -->
+    <!-- Formulario de contacto fin -->
+    
     <!-- Footer-->
         <?php
         include_once('partes/footer.php')

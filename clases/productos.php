@@ -10,16 +10,20 @@ class Productos{
 
     public function getProductos($filtro = array()){
  
-        $query = "SELECT * FROM productos ";
+        $query = "SELECT * FROM productos";
         
         $where = array();
 
         if (!empty($filtro['cat']) ){
-            $where[] = ' categoria_id = '.$filtro['cat']; 
+            if(is_numeric($filtro['cat'])) {
+                $where[] = ' categoria_id = '.$filtro['cat']; 
+            }
         }
 
         if(!empty($filtro['marca'])){
-            $where[] = ' marca_id = '.$filtro['marca']; 
+            if(is_numeric($filtro['marca'])) {
+                $where[] = ' marca_id = '.$filtro['marca']; 
+            }
         }
 
         if(!empty($where)){

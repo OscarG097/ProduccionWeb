@@ -16,13 +16,44 @@
 					</a>
 				</li>
 			<?php }?>
-			<li>
+				<li>
 					<a href="productos.php?cat=&marca=<?php echo isset($_GET['marca'])?$_GET['marca']:''?>&order=<?php echo isset($_GET['order'])?$_GET['order']:''?>">
 						<span class="icon-chevron-right"></span>Todos
 					</a>
 				</li>
 		</ul>
     </div>
+
+	<!--FUNCION PARA SUBCATEGORIAS FALTA APLICAR-->
+	
+	<?php
+	/*
+		define("LIMITE", 2);
+
+		function printCategoria( $con, $padre = 0, $nivel = 1) {
+			$query = "SELECT * FROM categorias WHERE padre_id = ".$padre;
+			$cate = $con->query($query)->fetchAll();
+			if (!empty($cate)) { ?>
+				<ul>
+					<?php foreach($cate as $cat) { ?>
+						<li>
+							<a href="productos.php?cat=<?php echo $cat['id']?>&marca=<?php echo (isset($_GET['marca'])?$_GET['marca']:'') ?>&order=<?php echo isset($_GET['order'])?$_GET['order']:''?>">
+								<span class="icon-chevron-right"></span><?php echo $cat['nombre']?>
+							</a>
+							<?php 
+								if ($nivel++ < LIMITE) {
+									printCategoria($con, $cat['id'], $nivel);
+								}
+							?>
+						</li>	
+					<?php } ?>
+				</ul>
+			<?php }
+		}
+
+		printCategoria($con);
+	*/
+	?>
 
 	<!-- Marcas -->
 	<div class="filter__item">

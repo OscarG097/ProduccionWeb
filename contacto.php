@@ -91,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <form action="#">
+            <form action="#" method="post">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <input type="text" name="nombre_apellido" placeholder="Nombre y Apellido">
@@ -113,11 +113,14 @@
                         </div>
                     <div class="col-lg-12 text-center">
                         <textarea name="comentario" placeholder="Tu Mensaje"></textarea>
-                        <button type="submit" class="site-btn">Enviar Mensaje</button>
+                        <button type="submit" class="site-btn" name="enviar">Enviar Mensaje</button>
                         <div class="sidebar__item sidebar__item__color--option">
                     </div>
                 </div>
             </form>
+            <?php
+            include("enviarmail.php");
+            ?>
         </div>
     </div>
     <!-- Formulario de contacto fin -->

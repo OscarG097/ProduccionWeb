@@ -1,7 +1,7 @@
 <!--Página en desarrollo-->
 
 <?php
-if(isset($_POST['email'])) {
+if(isset($_POST['emviar'])) {
 
 // Enviar mail
 $email_to = "oscar.gimenez@davinci.edu.ar";

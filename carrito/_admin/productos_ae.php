@@ -1,6 +1,10 @@
 <?php 
 require('inc/header.php');
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 24d9a9572d4eac8a426af2e427e08b2a4dbfdc68
 ?> 
 
 <div class="container-fluid">
@@ -14,8 +18,12 @@ require('inc/header.php');
 		}
       
       $productosmenu = 'productos';
+<<<<<<< HEAD
   include('inc/side_bar.php');
   include('clases/productos.php');
+=======
+	include('inc/side_bar.php');
+>>>>>>> 24d9a9572d4eac8a426af2e427e08b2a4dbfdc68
 	
 	//$productos = new Perfil($con); 
 	
@@ -23,7 +31,15 @@ require('inc/header.php');
     $productos = $con->query($query);
   
 	
+<<<<<<< HEAD
       ?>
+=======
+	if(isset($_GET['edit'])){
+            $productos = $producto->get($_GET['edit']); 
+           
+	} 
+	?>
+>>>>>>> 24d9a9572d4eac8a426af2e427e08b2a4dbfdc68
 	   
         <div class="col-sm-9 col-md-10 main">
           
@@ -51,7 +67,11 @@ require('inc/header.php');
                     <button type="submit" class="btn btn-default" name="formulario_perfiles" >Guardar</button>
                     </div>
                 </div> 
+<<<<<<< HEAD
                 <input type="hidden" class="form-control" id="id" name="id" placeholder="" value="<?php echo (isset($productos->id)?$productos->id:'');?>">
+=======
+                <input type="hidden" class="form-control" id="id" name="id" placeholder="" value="<?php echo (isset($perfiles->id)?$perfiles->id:'');?>">
+>>>>>>> 24d9a9572d4eac8a426af2e427e08b2a4dbfdc68
 
             </form>
           </div>

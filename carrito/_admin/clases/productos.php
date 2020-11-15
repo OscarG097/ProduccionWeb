@@ -32,6 +32,7 @@ class Productos{
     public function getProductosHomeRandom(){
         return $this->con->query("SELECT * FROM productos ORDER BY rand() LIMIT 6");
     }
+<<<<<<< HEAD
 
     //FUNCION EDIT COPIADO DE PERFIL.PHP
 
@@ -64,4 +65,8 @@ class Productos{
          
         } 
     }
+=======
+}
+
+>>>>>>> 24d9a9572d4eac8a426af2e427e08b2a4dbfdc68
 ?>

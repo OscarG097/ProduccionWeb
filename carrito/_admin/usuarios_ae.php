@@ -1,7 +1,7 @@
 <?php 
 require('inc/header.php');
 
-//include('clases/usuarios.php');
+include('clases/usuarios.php'); //Esta Linea estaba comentada. Pero tira error
 ?> 
 
 <div class="container-fluid">
@@ -12,7 +12,7 @@ require('inc/header.php');
 	
 	   if(  !in_array('user.add',$_SESSION['usuario']['permisos']) &&		
 			!in_array('user.edit',$_SESSION['usuario']['permisos']) ){ 
-				header('Location: index.php');
+				header('Location: usuarios_ae.php');
 			}
 	
 	$perfil = new Perfil($con); 

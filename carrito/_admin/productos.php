@@ -38,6 +38,7 @@ require('inc/header.php');
                 </tr>
 			  </thead>
 			  
+
 			  <!-- nO ESTÁ AGARRANDO LOS DATOS DE LA TABLA --> <?php
 			  try {
 				$con = new PDO('mysql:host='.$hostname.';port='.$port.';dbname='.$database='glob', $username, $password);
@@ -46,27 +47,30 @@ require('inc/header.php');
 				die();
 		}
 
+		foreach($con->query('SELECT * from productos') as $prod){ ?>
 
-		//foreach($Productos->getList() as $prod){?>
-				  
-				  <tr>
-						  <td><?php echo ['id']?></td>
-						  <td><?php echo $prod['nombre']?></td>
-						  <td><?php echo $prod['modelo']?></td>
-						  <td><?php echo $prod['precio']?></td>
-						  <td><?php echo $prod['cantidad']?></td> 
-						  <td>
-						  <a href="#"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
-						  <a href="#"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
-					      </td>
-						</tr>   
-			
-	
-          </div>
- 
-          
-      </div><!--/row-->
-	</div>
-</div><!--/.container-->
+			<tbody> 
+
+						<td><?php echo $prod['id']?></td>
+						<td><?php echo $prod['nombre']?></td>
+						<td><?php echo $prod['modelo']?></td>
+						<td><?php echo $prod['precio']?></td>
+						<td><?php echo $prod['cantidad']?></td> 
+						<td>
+							<a href="#"><button type="button" class="btn btn-info" title="Modificar">M</button></a>
+							<a href="#"><button type="button" class="btn btn-danger" title="Borrar">X</button></a>
+						<a href="#"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
+						<a href="#"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
+						</td>
+					  </tr>         
+			</tbody>
+					  </tr>      
+			</tbody>
+			<?php } ?>
+		  </table>
+		</div>
+</div>
+</div>  
+</section>
 
 <?php include('inc/footer.php');?>

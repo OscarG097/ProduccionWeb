@@ -39,7 +39,7 @@ require('inc/header.php');
 			  </thead>
 			  
 
-			  <!-- nO ESTÁ AGARRANDO LOS DATOS DE LA TABLA --> <?php
+			 <?php
 			  try {
 				$con = new PDO('mysql:host='.$hostname.';port='.$port.';dbname='.$database='glob', $username, $password);
 		} catch (PDOException $e) {
@@ -57,8 +57,8 @@ require('inc/header.php');
 						<td><?php echo $prod['precio']?></td>
 						<td><?php echo $prod['cantidad']?></td> 
 						<td>
-							<a href="#"><button type="button" class="btn btn-info" title="Modificar">M</button></a>
-							<a href="#"><button type="button" class="btn btn-danger" title="Borrar">X</button></a>
+						<a href="productos_ae.php?edit=<?php echo $prod['id']?>"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
+							  <a href="productos_ae.php?del=<?php echo $prod['id']?>"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
 						</td>
 					  </tr>         
 			</tbody>

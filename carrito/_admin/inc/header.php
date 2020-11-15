@@ -6,8 +6,9 @@ include('clases/usuarios.php');
 include('clases/perfil.php');
 
 
+
 try {
-        $con = new PDO('mysql:host='.$hostname.';port='.$port.';dbname='.$database, $username, $password);
+        $con = new PDO('mysql:host='.$hostname.';port='.$port.';dbname='.$database='carrito', $username, $password);
 } catch (PDOException $e) {
         print "Error!: " . $e->getMessage();
         die();

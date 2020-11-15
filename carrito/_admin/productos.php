@@ -37,28 +37,38 @@ require('inc/header.php');
 				  <th>Acciones</th>
                 </tr>
 			  </thead>
-			  <!-- nO ESTÁ AGARRANDO LOS DATOS DE LA TABLA --> <?php foreach($Productos->getProductos($_GET) as $prod){ ?>
 			  
-			  <tbody> 
-						<tr>
-						  <td><?php echo $prod['id']?></td>
-						  <td><?php echo $prod['nombre']?></td>
-						  <td><?php echo $prod['modelo']?></td>
-						  <td><?php echo $prod['precio']?></td>
-						  <td><?php echo $prod['cantidad']?></td> 
-						  <td>
-						  <a href="#"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
-						  <a href="#"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
-					      </td>
-						</tr>      
-			  </tbody>
-			  <?php } ?>
-            </table>
-          </div>
- 
-          
-      </div><!--/row-->
-	</div>
-</div><!--/.container-->
+
+			 <?php
+			  try {
+				$con = new PDO('mysql:host='.$hostname.';port='.$port.';dbname='.$database='glob', $username, $password);
+		} catch (PDOException $e) {
+				print "Error!: " . $e->getMessage();
+				die();
+		}
+
+		foreach($con->query('SELECT * from productos') as $prod){ ?>
+
+			<tbody> 
+
+						<td><?php echo $prod['id']?></td>
+						<td><?php echo $prod['nombre']?></td>
+						<td><?php echo $prod['modelo']?></td>
+						<td><?php echo $prod['precio']?></td>
+						<td><?php echo $prod['cantidad']?></td> 
+						<td>
+						<a href="productos_ae.php?edit=<?php echo $prod['id']?>"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
+							  <a href="productos_ae.php?del=<?php echo $prod['id']?>"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
+						</td>
+					  </tr>         
+			</tbody>
+					  </tr>      
+			</tbody>
+			<?php } ?>
+		  </table>
+		</div>
+</div>
+</div>  
+</section>
 
 <?php include('inc/footer.php');?>

@@ -4,10 +4,11 @@ include('../inc/db_data.php');
 
 include('clases/usuarios.php');
 include('clases/perfil.php');
+include('clases/productos.php');
 
 
 try {
-        $con = new PDO('mysql:host='.$hostname.';port='.$port.';dbname='.$database, $username, $password);
+        $con = new PDO('mysql:host='.$hostname.';port='.$port.';dbname='.$database='carrito', $username, $password);
 } catch (PDOException $e) {
         print "Error!: " . $e->getMessage();
         die();

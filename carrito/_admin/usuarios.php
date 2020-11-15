@@ -1,6 +1,6 @@
 <?php 
 require('inc/header.php');
-//include('clases/usuarios.php');
+
 ?> 
 
 <div class="container-fluid">

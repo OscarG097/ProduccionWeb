@@ -9,7 +9,7 @@ include('clases/perfil.php');
 try {
         $con = new PDO('mysql:host='.$hostname.';port='.$port.';dbname='.$database, $username, $password);
 } catch (PDOException $e) {
-        print "�Error!: " . $e->getMessage();
+        print "Error!: " . $e->getMessage();
         die();
 }
 
@@ -57,12 +57,12 @@ if($user->notLogged()){
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="#">Configuracion</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Ayuda</a></li>
           </ul>
           <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
+            <input type="text" class="form-control" placeholder="Buscar...">
           </form>
         </div>
       </div>

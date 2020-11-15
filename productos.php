@@ -25,11 +25,8 @@
     <!-- Breadcrumb Section End -->
 
     <section class="product spad">
-
         <div class="container">
-
             <div class="row">
-            
                 <div class="col-md-3 col-sm-5">
                     <div class="sidebar">
                         <div class="sidebar__item">
@@ -73,28 +70,18 @@
                                     </div>
                                         <div class="product__item__text"> 
                                             
-                                            <h4><?php echo $prod['nombre']?></h4>
-                                            <h5><?php echo $prod['modelo']?></h5>
-                                            <h7>$ <?php echo $prod['precio']?></strong></h7>
-                                            <p>Stock: <?php echo $prod['cantidad']?></p>
-                                        
-                                        </div>
-                                        
-                                    </div>      
-                            </div>
+                                     <h4><?php echo $prod['nombre']?></h4>
+                                     <h5><?php echo $prod['modelo']?></h5>
+                                     <h7>$ <?php echo $prod['precio']?></strong></h7>
+                                     <p>Stock: <?php echo $prod['cantidad']?></p>
+                                </div>
+                            </div>      
+                        </div>
                     </div>
                 <?php } ?>
-
-                    
-                
             </div>
-            
-        </div>
-
-                
+        </div>  
     </section>
-
-    
     <!-- Product Section End -->
 
         <?php

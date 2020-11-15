@@ -14,7 +14,7 @@
 					<li class="<?php echo isset($userMenu)?'active':''?>"><a href="usuarios.php">Usuarios</a></li>
 			  <?php }?>
 			 <li class="<?php echo isset($perfilMenu)?'active':''?>"><a href="perfiles.php">Perfiles</a></li>
-              <li><a href="?logout">logout</a></li>
+              <li><a href="?logout">Logout</a></li>
               <li><a href="#">Export</a></li>
             </ul>
            

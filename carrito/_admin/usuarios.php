@@ -52,7 +52,7 @@ require('inc/header.php');
 
           <h2 class="sub-header">Listado 
 		  <?php if(in_array('user.add',$_SESSION['usuario']['permisos']['cod'])){?>
-				<a href="usuarios_ae.php"><button type="button" class="btn btn-success" title="Agregar">A</button></a>
+				<a href="usuarios_ae.php"><button type="button" class="btn btn-success" title="Agregar">+</button></a>
 		  <?php }?>	
 		  </h2>
 		   <?php if(in_array('user.see',$_SESSION['usuario']['permisos']['cod'])){?>
@@ -84,10 +84,12 @@ require('inc/header.php');
 							  <td><?php echo ($usuario['activo'])?'si':'no';?></td>
 							  <td>
 								  <?php if(in_array('user.edit',$_SESSION['usuario']['permisos']['cod'])){?>
-										<a href="usuarios_ae.php?edit=<?php echo $usuario['id_usuario']?>"><button type="button" class="btn btn-info" title="Modificar">M</button></a>
+										<a href="usuarios_ae.php?edit=<?php echo $usuario['id_usuario']?>"><button type="button" class="btn btn-info" title="Modificar">Modif</button></a>
 								  <?php }?>
 								   <?php if(in_array('user.del',$_SESSION['usuario']['permisos']['cod'])){?>
-										<a href="usuarios.php?del=<?php echo $usuario['id_usuario']?>"><button type="button" class="btn btn-danger" title="Borrar">X</button></a>
+										<a href="usuarios.php?del=<?php echo $usuario['id_usuario']?>"><button type="button" class="btn btn-danger" title="Borrar">Borrar
+										
+										</button></a>
 								<?php }?>
 							  </td>
 							</tr>

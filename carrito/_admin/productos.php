@@ -6,9 +6,8 @@ require('inc/header.php');
       
       <?php $productsMenu = 'Productos';
 	include('inc/side_bar.php');
-	 
-
         ?>
+	  
 	  
 	  
         
@@ -27,48 +26,33 @@ require('inc/header.php');
           <h2 class="sub-header">Listado <a href="#"><button type="button" class="btn btn-success" title="Agregar">A</button></a></h2>
           <div class="table-responsive">
             <table class="table table-striped">
+				
               <thead>
                 <tr>
-                  <th>#</th>
+                  <th>ID</th>
                   <th>Nombre</th>
-                  <th>Fecha</th>
-                  <th>Activa</th> 
+				  <th>Modelo</th>
+				  <th>Precio</th>
+                  <th>Cant. Stock</th> 
 				  <th>Acciones</th>
                 </tr>
-              </thead>
+			  </thead>
+			  <!-- nO ESTÁ AGARRANDO LOS DATOS DE LA TABLA --> <?php foreach($Productos->getProductos($_GET) as $prod){ ?>
+			  
 			  <tbody> 
-              
 						<tr>
-						  <td>1</td>
-						  <td>SSD</td>
-						  <td>26/04/2018</td>
-						  <td>Sí</td> 
+						  <td><?php echo $prod['id']?></td>
+						  <td><?php echo $prod['nombre']?></td>
+						  <td><?php echo $prod['modelo']?></td>
+						  <td><?php echo $prod['precio']?></td>
+						  <td><?php echo $prod['cantidad']?></td> 
 						  <td>
-						      <a href="#"><button type="button" class="btn btn-info" title="Modificar">M</button></a>
-							  <a href="#"><button type="button" class="btn btn-danger" title="Borrar">X</button></a>
+						  <a href="#"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
+						  <a href="#"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
 					      </td>
-						</tr>
-						<tr>
-						  <td>1</td>
-						  <td>SSD</td>
-						  <td>26/04/2018</td>
-						  <td>Sí</td> 
-						  <td>
-						      <a href="#"><button type="button" class="btn btn-info" title="Modificar">M</button></a>
-							  <a href="#"><button type="button" class="btn btn-danger" title="Borrar">X</button></a>
-					      </td>
-						</tr>
-						<tr>
-						  <td>1</td>
-						  <td>SSD</td>
-						  <td>26/04/2018</td>
-						  <td>Sí</td> 
-						  <td>
-						      <a href="#"><button type="button" class="btn btn-info" title="Modificar">M</button></a>
-							  <a href="#"><button type="button" class="btn btn-danger" title="Borrar">X</button></a>
-					      </td>
-						</tr>         
-              </tbody>
+						</tr>      
+			  </tbody>
+			  <?php } ?>
             </table>
           </div>
  

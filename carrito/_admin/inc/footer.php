@@ -1,5 +1,5 @@
 <footer>
-  <p class="pull-right">©2014 Company</p>
+  <p class="pull-right">Glob by SoftNova Company</p>
 </footer>
         
 	<!-- script references -->

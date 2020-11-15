@@ -59,8 +59,6 @@ require('inc/header.php');
 						<td>
 							<a href="#"><button type="button" class="btn btn-info" title="Modificar">M</button></a>
 							<a href="#"><button type="button" class="btn btn-danger" title="Borrar">X</button></a>
-						<a href="#"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
-						<a href="#"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
 						</td>
 					  </tr>         
 			</tbody>

@@ -5,10 +5,34 @@ require('inc/header.php');
 <div class="container-fluid">
       
       <?php $productsMenu = 'Productos';
+	  
+	$productos = new Productos($con);
 	include('inc/side_bar.php');
+	 
+	 
+	if(isset($_POST['formulario_productos'])){ 
+	    if($_POST['id'] > 0){
+                $productos->edit($_POST); 
+               
+	    }else{
+			
+                $productos->save($_POST); 
+        }
+		
+		header('Location: productos.php');
+	}	
+	 
+	if(isset($_GET['del'])){
+			$resp = $perfiles->del($_GET['del']) 	;
+            if($resp == 1){
+				header('Location: productos.php');	
+			}
+			echo '<script>alert("'.$resp.'");</script>';
+
+	}
+	
+
         ?>
-	  
-	  
 	  
         
         <div class="col-sm-9 col-md-10 main">

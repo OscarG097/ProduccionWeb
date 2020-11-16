@@ -32,9 +32,7 @@ class Productos{
     public function getProductosHomeRandom(){
         return $this->con->query("SELECT * FROM productos ORDER BY rand() LIMIT 6");
     }
-<<<<<<< HEAD
 
-    //FUNCION EDIT COPIADO DE PERFIL.PHP
 
     public function edit($data){
         $id = $data['id'];
@@ -47,26 +45,23 @@ class Productos{
                 }
             }
         }
-        $sql = "UPDATE perfil SET ".implode(',',$columns)." WHERE id = ".$id;
+        $sql = "UPDATE productos SET ".implode(',',$columns)." WHERE id = ".$id;
         //echo $sql; die();
         $this->con->exec($sql);
         
          
          
-            $sql = 'DELETE FROM perfil_permisos WHERE perfil_id= '.$id;
-            $this->con->exec($sql);
-            
-            $sql = '';
-            foreach($data['permisos'] as $permisos){
-                $sql .= 'INSERT INTO perfil_permisos(perfil_id,permiso_id) 
-                            VALUES ('.$id.','.$permisos.');';
-            }
-            $this->con->exec($sql);
+        $sql = 'DELETE FROM productos WHERE id= '.$id;
+        $this->con->exec($sql);
+        
+        $sql = '';
+        foreach($data['productos'] as $productos){
+            $sql .= 'INSERT INTO productos(id,marca_id,categoria_id,modelo,nombre,precio,cantidad,destacado,puntacion) 
+                        VALUES ('.$id.','.$marca_id.','$categoria_id','$modelo','$nombre','$precio','$cantidad','$destacado','$puntacion');';
+        }
+        $this->con->exec($sql);
          
-        } 
-    }
-=======
+} 
 }
 
->>>>>>> 24d9a9572d4eac8a426af2e427e08b2a4dbfdc68
 ?>

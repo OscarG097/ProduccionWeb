@@ -6,7 +6,8 @@ require('inc/header.php');
 <div class="container-fluid">
       
       <?php $perfilMenu = 'Perfiles';
-	include('inc/side_bar.php');
+    include('inc/side_bar.php');
+   
 	
 	$perfil = new Perfil($con); 
 	
@@ -15,7 +16,7 @@ require('inc/header.php');
    // var_dump($permisos);
 	
 	if(isset($_GET['edit'])){
-            $perfiles = $perfil->get($_GET['edit']); 
+           $perfiles = $perfil->get($_GET['edit']); 
             //var_dump($perfiles);
 	} 
 	?>

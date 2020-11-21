@@ -6,7 +6,7 @@ require('inc/header.php');
       
       <?php $productsMenu = 'Productos';
 	  
-	$productos = new Productos($con);
+	//$productos = new Productos($con);
 	include('inc/side_bar.php');
 	 
 	 

@@ -10,13 +10,19 @@ class Productos{
 
     public function getProductos($filtro = array()){
  
-        $query = "SELECT * FROM productos";
+        $query = "SELECT * FROM productos " ;
         
         $where = array();
 
         if (!empty($filtro['cat']) ){
             if(is_numeric($filtro['cat'])) {
                 $where[] = ' categoria_id = '.$filtro['cat']; 
+            }
+        }
+        
+        if (!empty($filtro['pcat']) ){
+            if(is_numeric($filtro['pcat'])) {
+                $where[] = ' sub_categoria = '.$filtro['pcat']; 
             }
         }
 
@@ -29,6 +35,8 @@ class Productos{
         if(!empty($where)){
             $query .= ' WHERE '.implode(' AND ',$where);
         }
+
+        //echo $query; die();
 
         // ORDER
         if (!empty($filtro['order'])) {
@@ -50,7 +58,7 @@ class Productos{
     }
 
     public function getProductosHomeRandom(){
-        return $this->con->query("SELECT * FROM productos ORDER BY rand() LIMIT 6");
+        return $this->con->query("SELECT * FROM productos ORDER BY rand() LIMIT 12");
     }
 }
 

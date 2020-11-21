@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-11-2020 a las 19:40:49
+-- Tiempo de generación: 21-11-2020 a las 23:18:06
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.2.34
 
@@ -39,10 +39,10 @@ CREATE TABLE `categorias` (
 
 INSERT INTO `categorias` (`id`, `nombre`, `padre_id`) VALUES
 (1, 'Calzado', 0),
-(2, 'Camperas', 1),
-(3, 'Camisetas', 1),
-(4, 'Short', 1),
-(5, 'Buzos', 0),
+(2, 'Camperas', 10),
+(3, 'Camisetas', 10),
+(4, 'Short', 10),
+(5, 'Buzos', 10),
 (6, 'Accesorios', 0),
 (8, 'zapatillas', 1),
 (9, 'botines', 1),
@@ -94,25 +94,25 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `marca_id`, `categoria_id`, `nombre`, `modelo`, `precio`, `cantidad`, `destacado`, `puntuacion`, `sub_categoria`) VALUES
-(2, 1, 1, 'Botin Adidas', 'Predator 19.4', 30, 1500, 0, 3, 9),
-(3, 2, 6, 'Guantes Nike', 'GK Spyne Pro', 30, 1000, 0, 5, NULL),
-(4, 1, 10, 'Camiseta Adidas', 'Juventus \'20', 30, 1500, 0, 5, 3),
-(5, 4, 1, 'Botin Nike', 'Mercuriarl Superfly', 30, 100, 0, 5, 9),
-(6, 1, 10, 'Campera Adidas', 'Bayern Munich \'20', 30, 100, 0, 4, 2),
-(7, 2, 6, 'Canillera Nike', 'Mercurial Lite', 30, 1000, 0, 5, NULL),
-(8, 2, 10, 'Camiseta Nike', 'Barcelona \'20', 30, 1000, 0, 5, 3),
-(9, 1, 6, 'Pelota Adidas', 'UCL Final \'20', 30, 1000, 0, 5, NULL),
-(10, 1, 6, 'Guantes Adidas', 'BearBox Y', 30, 1000, 0, 5, NULL),
-(11, 3, 1, 'Botas Boxeo Reebok', 'Master', 30, 1000, 0, 4, NULL),
-(12, 1, 1, 'Calzado Adidas', 'Hockey Narma', 30, 30, 0, 4, 8),
-(13, 2, 10, 'Campera Nike', 'WindRunner', 30, 35, 0, 4, 2),
-(14, 1, 6, 'Pelota Adidas', 'Tsubasa League', 30, 1000, 1, 4, NULL),
-(15, 1, 10, 'Camiseta Adidas', 'Manchester United \'20', 30, 30, 1, 5, 3),
-(16, 1, 6, 'Pelota Adidas', 'Unifornia \'20', 30, 70, 1, 4, NULL),
-(17, 1, 6, 'Pelota Adidas', 'Argentum \'19', 30, 0, 1, 5, NULL),
-(18, 1, 1, 'Botin Adidas', 'Nemeziz 19+', 30, 1000, 1, 4, 9),
-(19, 1, 6, 'Guantes Adidas', 'BearBox', 30, 40, 1, 4, NULL),
-(20, 5, 6, 'Guantes Everlast', 'Classic', 30, 1000, 1, 5, NULL);
+(2, 1, 9, 'Botin Adidas', 'Predator 19.4', 30, 1500, 0, 3, 1),
+(3, 2, 6, 'Guantes Nike', 'GK Spyne Pro', 30, 1000, 0, 5, 6),
+(4, 1, 3, 'Camiseta Adidas', 'Juventus \'20', 30, 1500, 0, 5, 10),
+(5, 4, 9, 'Botin Nike', 'Mercuriarl Superfly', 30, 100, 0, 5, 1),
+(6, 1, 2, 'Campera Adidas', 'Bayern Munich \'20', 30, 100, 0, 4, 10),
+(7, 2, 6, 'Canillera Nike', 'Mercurial Lite', 30, 1000, 0, 5, 6),
+(8, 2, 3, 'Camiseta Nike', 'Barcelona \'20', 30, 1000, 0, 5, 10),
+(9, 1, 6, 'Pelota Adidas', 'UCL Final \'20', 30, 1000, 0, 5, 6),
+(10, 1, 6, 'Guantes Adidas', 'BearBox Y', 30, 1000, 0, 5, 6),
+(11, 3, 1, 'Botas Boxeo Reebok', 'Master', 30, 1000, 0, 4, 6),
+(12, 1, 8, 'Calzado Adidas', 'Hockey Narma', 30, 30, 0, 4, 1),
+(13, 2, 2, 'Campera Nike', 'WindRunner', 30, 35, 0, 4, 10),
+(14, 1, 6, 'Pelota Adidas', 'Tsubasa League', 30, 1000, 1, 4, 6),
+(15, 1, 3, 'Camiseta Adidas', 'Manchester United \'20', 30, 30, 1, 5, 10),
+(16, 1, 6, 'Pelota Adidas', 'Unifornia \'20', 30, 70, 1, 4, 6),
+(17, 1, 6, 'Pelota Adidas', 'Argentum \'19', 30, 0, 1, 5, 6),
+(18, 1, 9, 'Botin Adidas', 'Nemeziz 19+', 30, 1000, 1, 4, 1),
+(19, 1, 6, 'Guantes Adidas', 'BearBox', 30, 40, 1, 4, 6),
+(20, 5, 6, 'Guantes Everlast', 'Classic', 30, 1000, 1, 5, 6);
 
 --
 -- Índices para tablas volcadas

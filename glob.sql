@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-11-2020 a las 20:30:03
--- Versión del servidor: 10.4.13-MariaDB
--- Versión de PHP: 7.4.8
+-- Tiempo de generación: 21-11-2020 a las 19:40:49
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,14 +39,14 @@ CREATE TABLE `categorias` (
 
 INSERT INTO `categorias` (`id`, `nombre`, `padre_id`) VALUES
 (1, 'Calzado', 0),
-(2, 'Camperas', 0),
-(3, 'Camisetas', 0),
-(4, 'Short', 0),
+(2, 'Camperas', 1),
+(3, 'Camisetas', 1),
+(4, 'Short', 1),
 (5, 'Buzos', 0),
 (6, 'Accesorios', 0),
 (8, 'zapatillas', 1),
 (9, 'botines', 1),
-(10, 'ojotas', 1);
+(10, 'Indumentaria', 0);
 
 -- --------------------------------------------------------
 
@@ -85,33 +85,34 @@ CREATE TABLE `productos` (
   `precio` double NOT NULL,
   `cantidad` int(11) NOT NULL,
   `destacado` tinyint(1) NOT NULL,
-  `puntuacion` int(11) NOT NULL
+  `puntuacion` int(11) NOT NULL,
+  `sub_categoria` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id`, `marca_id`, `categoria_id`, `nombre`, `modelo`, `precio`, `cantidad`, `destacado`, `puntuacion`) VALUES
-(2, 1, 1, 'Botin Adidas', 'Predator 19.4', 30, 1500, 0, 3),
-(3, 2, 6, 'Guantes Nike', 'GK Spyne Pro', 30, 1000, 0, 5),
-(4, 1, 3, 'Camiseta Adidas', 'Juventus \'20', 30, 1500, 0, 5),
-(5, 4, 2, 'Botin Nike', 'Mercuriarl Superfly', 30, 100, 0, 5),
-(6, 1, 2, 'Campera Adidas', 'Bayern Munich \'20', 30, 100, 0, 4),
-(7, 2, 4, 'Canillera Nike', 'Mercurial Lite', 30, 1000, 0, 5),
-(8, 2, 2, 'Camiseta Nike', 'Barcelona \'20', 30, 1000, 0, 5),
-(9, 1, 4, 'Pelota Adidas', 'UCL Final \'20', 30, 1000, 0, 5),
-(10, 1, 4, 'Guantes Adidas', 'BearBox Y', 30, 1000, 0, 5),
-(11, 3, 1, 'Botas Boxeo Reebok', 'Master', 30, 1000, 0, 4),
-(12, 1, 1, 'Calzado Adidas', 'Hockey Narma', 30, 30, 0, 4),
-(13, 2, 2, 'Campera Nike', 'WindRunner', 30, 35, 0, 4),
-(14, 1, 6, 'Pelota Adidas', 'Tsubasa League', 30, 1000, 1, 4),
-(15, 1, 3, 'Camiseta Adidas', 'Manchester United \'20', 30, 30, 1, 5),
-(16, 1, 6, 'Pelota Adidas', 'Unifornia \'20', 30, 70, 1, 4),
-(17, 1, 6, 'Pelota Adidas', 'Argentum \'19', 30, 0, 1, 5),
-(18, 1, 1, 'Botin Adidas', 'Nemeziz 19+', 30, 1000, 1, 4),
-(19, 1, 6, 'Guantes Adidas', 'BearBox', 30, 40, 1, 4),
-(20, 5, 6, 'Guantes Everlast', 'Classic', 30, 1000, 1, 5);
+INSERT INTO `productos` (`id`, `marca_id`, `categoria_id`, `nombre`, `modelo`, `precio`, `cantidad`, `destacado`, `puntuacion`, `sub_categoria`) VALUES
+(2, 1, 1, 'Botin Adidas', 'Predator 19.4', 30, 1500, 0, 3, 9),
+(3, 2, 6, 'Guantes Nike', 'GK Spyne Pro', 30, 1000, 0, 5, NULL),
+(4, 1, 10, 'Camiseta Adidas', 'Juventus \'20', 30, 1500, 0, 5, 3),
+(5, 4, 1, 'Botin Nike', 'Mercuriarl Superfly', 30, 100, 0, 5, 9),
+(6, 1, 10, 'Campera Adidas', 'Bayern Munich \'20', 30, 100, 0, 4, 2),
+(7, 2, 6, 'Canillera Nike', 'Mercurial Lite', 30, 1000, 0, 5, NULL),
+(8, 2, 10, 'Camiseta Nike', 'Barcelona \'20', 30, 1000, 0, 5, 3),
+(9, 1, 6, 'Pelota Adidas', 'UCL Final \'20', 30, 1000, 0, 5, NULL),
+(10, 1, 6, 'Guantes Adidas', 'BearBox Y', 30, 1000, 0, 5, NULL),
+(11, 3, 1, 'Botas Boxeo Reebok', 'Master', 30, 1000, 0, 4, NULL),
+(12, 1, 1, 'Calzado Adidas', 'Hockey Narma', 30, 30, 0, 4, 8),
+(13, 2, 10, 'Campera Nike', 'WindRunner', 30, 35, 0, 4, 2),
+(14, 1, 6, 'Pelota Adidas', 'Tsubasa League', 30, 1000, 1, 4, NULL),
+(15, 1, 10, 'Camiseta Adidas', 'Manchester United \'20', 30, 30, 1, 5, 3),
+(16, 1, 6, 'Pelota Adidas', 'Unifornia \'20', 30, 70, 1, 4, NULL),
+(17, 1, 6, 'Pelota Adidas', 'Argentum \'19', 30, 0, 1, 5, NULL),
+(18, 1, 1, 'Botin Adidas', 'Nemeziz 19+', 30, 1000, 1, 4, 9),
+(19, 1, 6, 'Guantes Adidas', 'BearBox', 30, 40, 1, 4, NULL),
+(20, 5, 6, 'Guantes Everlast', 'Classic', 30, 1000, 1, 5, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -155,7 +156,7 @@ ALTER TABLE `marcas`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

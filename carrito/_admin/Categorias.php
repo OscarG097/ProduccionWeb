@@ -76,8 +76,8 @@ require('inc/header.php');
 						<td><?php echo $cat['nombre']?></td>
 						<td><?php echo $cat['padre_id']?></td>
 						<td>
-						<a href="Categorias_ae.php?edit=<?php echo $prod['id']?>"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
-							  <a href="Categorias.php?del=<?php echo $prod['id']?>"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
+						<a href="Categorias_ae.php?edit=<?php echo $cat['id']?>"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
+							  <a href="Categorias.php?del=<?php echo $cat['id']?>"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
 						</td>
 					  </tr>         
 			</tbody>

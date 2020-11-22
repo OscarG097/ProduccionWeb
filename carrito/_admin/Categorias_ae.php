@@ -23,8 +23,8 @@ require('inc/header.php');
     $categorias = $con->query($query);
   
 	
-	if(isset($_GET['pito'])){
-		$categorias = $cate->get($_GET['pito']); 
+	if(isset($_GET['kjk'])){
+		$categorias = $cate->get($_GET['ekjkdit']); 
 		 //var_dump($perfiles);
  } 
 	?>

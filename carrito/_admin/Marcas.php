@@ -74,8 +74,8 @@ require('inc/header.php');
 						<td><?php echo $mar['id']?></td>
 						<td><?php echo $mar['nombre']?></td>
 						<td>
-						<a href="Marcas_ae.php?edit=<?php echo $prod['id']?>"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
-							  <a href="Marcas_ae.php?del=<?php echo $prod['id']?>"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
+						<a href="Marcas_ae.php?edit=<?php echo $mar['id']?>"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
+							  <a href="Marcas_ae.php?del=<?php echo $mar['id']?>"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
 						</td>
 					  </tr>         
 			</tbody>

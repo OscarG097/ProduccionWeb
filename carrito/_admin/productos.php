@@ -6,7 +6,7 @@ require('inc/header.php');
       
       <?php $productsMenu = 'Productos';
 	  
-	//$productos = new Productos($con);
+	$productos = new Productos($con);
 	include('inc/side_bar.php');
 	 
 	 
@@ -30,8 +30,6 @@ require('inc/header.php');
 			echo '<script>alert("'.$resp.'");</script>';
 
 	}
-	
-
         ?>
 	  
         

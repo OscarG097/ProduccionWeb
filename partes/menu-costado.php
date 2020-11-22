@@ -6,15 +6,13 @@
                     <div class="hero__categories">
                         <div class="hero__categories__all">
                             <i class="fa fa-bars"></i>
-                            <span>Nuestros Productos</span>
+                            <span>Lo más visitado</span>
                         </div>
                         <ul>
-                            <li><a href="#">Botines</a></li>
-                            <li><a href="#">Camisetas</a></li>
-                            <li><a href="#">Shorts</a></li>
-                            <li><a href="#">Camperas</a></li>
-                            <li><a href="#">Buzos</a></li>
-                            <li><a href="#">Accesorios</a></li>
+                            <li><a href="productos.php?cat=9">Botines</a></li>
+                            <li><a href="productos.php?cat=3">Camisetas</a></li>
+                            <li><a href="productos.php?cat=2">Camperas</a></li>
+                            <li><a href="productos.php?pcat=6">Accesorios</a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,7 +38,7 @@
                         <div class="hero__text">
                             </br>
                             <span>PhantomVNM</span>
-                            <h3>Solo 100 unidades</br> 06/10/2020 </h3>
+                            <h3>Solo 100 unidades</br> 12/12/2020 </h3>
                             <!--#Botón#
                             <a href="#" class="primary-btn">SHOP NOW</a>-->
                         </div>

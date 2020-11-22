@@ -45,11 +45,14 @@ class Productos{
                 $query .= ' ORDER BY nombre ASC';
             }elseif ($filtro['order'] == 'ZA') {
                 $query .= ' ORDER BY nombre DESC';
-            }else{
+            }elseif ($filtro['order'] == 'PUN') {
+                $query .= ' ORDER BY puntuacion DESC';
+            }
+            else{
                 $query .= ' ORDER BY destacado ASC';
             }   
-
-        }else{
+        }
+        else{
             $query .= ' ORDER BY destacado ASC';
         }
 

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-11-2020 a las 23:18:06
--- Versión del servidor: 10.4.14-MariaDB
--- Versión de PHP: 7.2.34
+-- Tiempo de generación: 22-11-2020 a las 06:44:48
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,8 +44,8 @@ INSERT INTO `categorias` (`id`, `nombre`, `padre_id`) VALUES
 (4, 'Short', 10),
 (5, 'Buzos', 10),
 (6, 'Accesorios', 0),
-(8, 'zapatillas', 1),
-(9, 'botines', 1),
+(8, 'Zapatillas', 1),
+(9, 'Botines', 1),
 (10, 'Indumentaria', 0);
 
 -- --------------------------------------------------------
@@ -103,7 +103,7 @@ INSERT INTO `productos` (`id`, `marca_id`, `categoria_id`, `nombre`, `modelo`, `
 (8, 2, 3, 'Camiseta Nike', 'Barcelona \'20', 30, 1000, 0, 5, 10),
 (9, 1, 6, 'Pelota Adidas', 'UCL Final \'20', 30, 1000, 0, 5, 6),
 (10, 1, 6, 'Guantes Adidas', 'BearBox Y', 30, 1000, 0, 5, 6),
-(11, 3, 1, 'Botas Boxeo Reebok', 'Master', 30, 1000, 0, 4, 6),
+(11, 3, 8, 'Botas Boxeo Reebok', 'Master', 30, 1000, 0, 4, 1),
 (12, 1, 8, 'Calzado Adidas', 'Hockey Narma', 30, 30, 0, 4, 1),
 (13, 2, 2, 'Campera Nike', 'WindRunner', 30, 35, 0, 4, 10),
 (14, 1, 6, 'Pelota Adidas', 'Tsubasa League', 30, 1000, 1, 4, 6),

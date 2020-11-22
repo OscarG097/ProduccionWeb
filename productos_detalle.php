@@ -29,27 +29,17 @@
     
 			<!--cabecera o menus-->
         <?php
-			include_once('partes/menu-superior.php');
+            include_once('partes/menu-superior.php');
+            
+            //COMIENZA LO NUEVO
+
+            require_once('clases/comentarios.php');
+            $comentarios = new comentario($con);
+            $mensaje = '';
+
 					
-		    if(isset($_POST['comentar'])){
-					
-                $data = $_POST;
-                unset($data['comentar']);
-                $fecha = new DateTime();
-                $indexComentario = $fecha->format('YmdHisu');
-                $data['fecha'] = date('d/m/Y H:i:s');
-					
-					
-			if(file_exists('datos/comentarios.json')){
-				$comentarioJson = file_get_contents('datos/comentarios.json');
-				$comentarioArray = json_decode($comentarioJson,true );
-				}else{
-					$comentarioArray = array();
-				}
-				$comentarioArray[$indexComentario] = $data;
-				$fp = fopen('datos/comentarios.json','w');
-				fwrite($fp,json_encode($comentarioArray));
-				fclose($fp); 
+		    if(isset($_POST['enviar_comentario'])){
+				$mensaje = $comentarios->guardarComentarios($_POST)
 				}
 				?>
 <!-- Productos-->
@@ -63,23 +53,6 @@
                             <?php
                                     include_once('partes/menu_de_filtrado.php');
                             ?>
-                        </div>
-                        <div class="sidebar__item">
-                            <h4>Rango Precio</h4>
-                            <div class="price-range-wrap">
-                                <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                    data-min="100" data-max="5000">
-                                    <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
-                                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
-                                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
-                                </div>
-                                <div class="range-slider">
-                                    <div class="price-input">
-                                        <input type="text" id="minamount">
-                                        <input type="text" id="maxamount">
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,10 +93,6 @@
 										<p style="color:black;">Stock: <?php echo $prod['cantidad']?></p>
 								
 									</li>
-                                              		
-              
-
-
                                     <li class="col-lg-12 col-sm-6">
 									<div class="thumbnail">
 										
@@ -138,24 +107,29 @@
 											<br>
 											<p style="color:black;"><strong>Ingrese su comentario</strong></p>
 											<div style="color:black;" class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Por favor, escriba su mensaje">
-												<textarea rows="4" placeholder="Comentario" id="textarea" class="input-xlarge" name="descripcion"></textarea>
+												<textarea rows="4" placeholder="Comentario" id="textarea" class="input-xlarge" name="comentario "></textarea>
 											</div>
 											
 											<div class="control-group">
-											<p style="color:black;"><strong>Deja tu puntaje del producto</strong></p>
+											<p style="color:black;"><strong>Deja tu puntaje del producto</strong>
 												<select class="form-control" name="rankeo">
 													<option style="color:black;" value="1">★</option>
 													<option style="color:black;" value="2">★★</option>
 													<option style="color:black;" value="3">★★★</option>
 													<option style="color:black;" value="4">★★★★</option>
 													<option style="color:black;" value="5">★★★★★</option>
-												</select>
+												</select></p>
 											</div>
 											<input type="hidden"  class="input-xlarge" name="producto_id" value="<?php echo $_GET['prod']?>"/>
 			
 
-											</fieldset>
-                                            <button class="btn-cart welcome-add-cart coleccion-gamer-btn margen" type="submit" name="comentar">Comentar</button>
+                                            </fieldset>
+                                            
+                                            <?php if (!empty ($mensaje)){
+                                                echo $mensaje;
+                                            }?>
+
+                                            <button class="btn-cart welcome-add-cart site-btn margen" type="submit" name="comentar">Comentar</button>
 										</form>
 									</li>	
 									<h4><u>Comentarios del producto<u></h4>

@@ -22,3 +22,10 @@ Creacion de carpeta pagina_productos dentro de img, aca estan las imagenes con n
 Modificacion de header.php se agrego 2 require_once para agregar el dbo y los productos, ademas del try para que traiga la BD
 Modificacion de productos.php se borro todas las imagenes viejas del template y se puso las de la pagina desde BD con el filtrado, ademas al costado funciona el filtrado por marcas y categorias
 El que pueda que revise que la pagina productos.php todos los productos quedaron en lista en vez de 1 al lado del otro 
+
+--22/09
+Eliminacion de carpetas irrelevantes al trabajo.
+Creación de .sql para la sección de comentarios.
+Arreglo de imágenes.
+Arreglos en el index - Agregado de "filtrado autompatico" en el menu del costado.
+Agregado de filtrado por puntuación y puntuación en los productos (Solo para verificar que se está haciendo bien, se puede sacar).

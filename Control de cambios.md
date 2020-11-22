@@ -29,3 +29,5 @@ Creación de .sql para la sección de comentarios.
 Arreglo de imágenes.
 Arreglos en el index - Agregado de "filtrado autompatico" en el menu del costado.
 Agregado de filtrado por puntuación y puntuación en los productos (Solo para verificar que se está haciendo bien, se puede sacar).
+Agregado de la clase 'comentarios' para la creacion de comentarios, todavía no está funcionando. Hay que revisar el archivo productos_detalle.
+No se corrigió el AVM.

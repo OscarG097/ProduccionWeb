@@ -9,11 +9,6 @@
 			  <li class="<?php echo isset($CategoriaMenu)?'active':''?>"><a href="Categorias.php">Categorias</a></li>
 			  <li class="<?php echo isset($marcasMenu)?'active':''?>"><a href="Marcas.php">Marcas</a></li>
 			  <li class="<?php echo isset($productsMenu)?'active':''?>"><a href="productos.php">Comentarios</a></li>
-			
-
-
-			  <li class="<?php echo isset($promoMenu)?'active':''?>"><a href="promociones.php">Promociones</a></li>
-			  <li class="<?php echo isset($newsMenu)?'active':''?>"><a href="noticias.php">Noticias</a></li>
 			  <?php if(in_array('pedido',$_SESSION['usuario']['permisos']['seccion'])){?>
 					<li class="<?php echo isset($pedidosMenu)?'active':''?>"><a href="pedidos.php">Pedidos</a></li>
 			  <?php }?>

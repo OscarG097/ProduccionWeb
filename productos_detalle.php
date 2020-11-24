@@ -1,180 +1,226 @@
-        <?php
+<?php
         include_once('partes/header.php')
-        ?>	
+        ?>
 
 <body>
         <?php
         include_once('partes/menu-superior.php')
         ?>
 
-        <?php
-        include_once('partes/menu-superior.php')
-        ?>
-
+    <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="img/banner.jpg">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 text-center">
+                <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
                         <h2>Productos</h2>
                         <div class="breadcrumb__option">
-                            <span>Nuestros Productos</span>
+                            <a href="./index.php">Home</a>
+                            <a href="./productos.php">Productos</a>
+                            <?php
+                            foreach ($Productos->getProductos($_GET) as $prod) {
+                                if ($prod['id'] == $_GET['prod']) {
+                                    break;
+                                }
+                            }
+                            ?>
+                            <span class="etiqueta"><?php echo $prod['nombre'] ?></span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Breadcrumb Section End -->
 
-    
-			<!--cabecera o menus-->
-        <?php
-            include_once('partes/menu-superior.php');
-            
-            //COMIENZA LO NUEVO
-
-            require_once('clases/comentarios.php');
-            $comentarios = new comentario($con);
-            $mensaje = '';
-
-					
-		    if(isset($_POST['enviar_comentario'])){
-				$mensaje = $comentarios->guardarComentarios($_POST)
-				}
-				?>
-<!-- Productos-->
-    <section class="product spad">
+    <!-- Product Details Section Begin -->
+    <section class="product-details spad">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-5">
-                    <div class="sidebar">
-                        <div class="sidebar__item">
-                            <h4>Productos</h4>
-                            <?php
-                                    include_once('partes/menu_de_filtrado.php');
-                            ?>
+                <div class="col-lg-6 col-md-6">
+                    <img src="img/pagina_productos/<?php echo $prod['id'] ?>.jpg" alt="" width="600" height="600">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__item">
+                            <img class="product__details__pic__item--large"
+                                src="img/product/details/product-details-1.jpg" alt="">
+                        </div>
+                        <div class="product__details__pic__slider owl-carousel">
+                            <img data-imgbigurl="img/product/details/product-details-2.jpg"
+                                src="img/product/details/thumb-1.jpg" alt="">
+                            <img data-imgbigurl="img/product/details/product-details-3.jpg"
+                                src="img/product/details/thumb-2.jpg" alt="">
+                            <img data-imgbigurl="img/product/details/product-details-5.jpg"
+                                src="img/product/details/thumb-3.jpg" alt="">
+                            <img data-imgbigurl="img/product/details/product-details-4.jpg"
+                                src="img/product/details/thumb-4.jpg" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-9 col-sm-7">
-                        <div class="col-md-12 col-sm-7">
-                        <div class="row-fluid">
-                        <div class="col-md-12">
-                            <div class="product__item">
-                                <div class="product__item__text">
-                            
-                                    <?php
-                                    foreach($Productos->getProductos($_GET) as $prod){
-                                        if($prod['id'] == $_GET['prod']){
-                                        break;
-                                    }
-                                }
-                                    ?>
-                        <li class="col-md-12">
-							<div class="thumbnail">
-								<h3 style="color:black;"><?php echo $prod['nombre']?></h3>
-						</li>	
+                <div class="col-lg-6 col-md-6">
 
-                        <li class="col-lg-12 col-sm-6">
-							<div >
-                               <img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt="" width="253" height="253">	
-                                    <button type="submit" class="site-btn">Añadir al carrito</button>
-							    		<form action="/action_page.php">
-  												<label style="color:black;" for="quantity">Cantidad (máx 5)</label>
-  												<input style="color:black;" type="number" id="quantity" name="quantity" min="1" max="5">
-										</form>
-						</li>	
-
-                                    <li class="col-lg-12 col-sm-6">
-									<div class="thumbnail">
-										
-										<h5 style="color:black;"><strong> <?php echo $prod['modelo']?></strong></h5>
-										<h7 style="color:black;">Modelo: <?php echo $prod['precio']?></h7>
-										<p style="color:black;">Stock: <?php echo $prod['cantidad']?></p>
-								
-									</li>
-                                    <li class="col-lg-12 col-sm-6">
-									<div class="thumbnail">
-										
-										<p style="color:black;"><strong>Deja un Comentario</strong></p>
-										</br>
-										<form class="form-horizontal" action="" method="post">
-											<fieldset>
-											<div class="control-group">
-												<input style="color:black;" type="text" placeholder="Ingrese su mail" class="input-xlarge formu" name="email">
-											</div>
-											
-											<br>
-											<p style="color:black;"><strong>Ingrese su comentario</strong></p>
-											<div style="color:black;" class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Por favor, escriba su mensaje">
-												<textarea rows="4" placeholder="Comentario" id="textarea" class="input-xlarge" name="comentario "></textarea>
-											</div>
-											
-											<div class="control-group">
-											<p style="color:black;"><strong>Deja tu puntaje del producto</strong>
-												<select class="form-control" name="rankeo">
-													<option style="color:black;" value="1">★</option>
-													<option style="color:black;" value="2">★★</option>
-													<option style="color:black;" value="3">★★★</option>
-													<option style="color:black;" value="4">★★★★</option>
-													<option style="color:black;" value="5">★★★★★</option>
-												</select></p>
-											</div>
-											<input type="hidden"  class="input-xlarge" name="producto_id" value="<?php echo $_GET['prod']?>"/>
-			
-
-                                            </fieldset>
-                                            
-                                            <?php if (!empty ($mensaje)){
-                                                echo $mensaje;
-                                            }?>
-
-                                            <button class="btn-cart welcome-add-cart site-btn margen" type="submit" name="comentar">Comentar</button>
-										</form>
-									</li>	
-									<h4><u>Comentarios del producto<u></h4>
-									<br>
-									<?php
-										if(file_exists('datos/comentarios.json')){
-											$comentarioJson = file_get_contents('datos/comentarios.json');
-											$comentarioArray = json_decode($comentarioJson,true );
-											//krsort($comentarioArray);
-											$cantidad = 0;
-											foreach($comentarioArray as $comentario){
-												if($comentario['producto_id'] == $_GET['prod']){ 
-													$cantidad++;
-													if($cantidad == 11) break;
-													?>
-													<h5>
-														<?php echo $comentario['email'].'('.$comentario['fecha'].'):'.$comentario['descripcion']; ?>
-													</h5>
-											<?php }
-											}
-										}
-									?> 
-
-                                                
-                                     </div>
-                                  </div>      
+                    <div class="product__details__text">
+                        <h3><?php echo $prod['nombre'] ?></h3>
+                        <div class="product__details__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span>(18 reviews)</span>
+                        </div>
+                        <div class="product__details__price"><?php echo '$'. $prod['precio'] ?></div>
+                        <p><?php echo $prod['descripcion'] ?></p>
+                        <div class="product__details__quantity">
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <input type="text" value="1">
                                 </div>
-                                
-
                             </div>
                         </div>
-                        
-                        
-                       
+                        <a href="#" class="primary-btn">Añadir al carrito</a>
+                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                        <ul>
+                            <li><b>Disponibilidad: </b> <span>En stock: <?php echo $prod['cantidad']. ' unidades disponibles' ?></span></li>
+                            <li><b>Envío:</b> <span><samp>Envío gratis hoy</samp></span></li>
+                            <li><b>Compartir:</b>
+                                <div class="share">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    
                 </div>
-            
-    
+                <div class="col-lg-12">
+                    <div class="product__details__tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
+                                    aria-selected="true">Descripción</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
+                                    aria-selected="false">Información</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
+                                    aria-selected="false">Comentarios<span>(1)</span></a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <h6>Products Infomation</h6>
+                                    <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+                                        Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Vivamus
+                                        suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam
+                                        vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada.
+                                        Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat,
+                                        accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a
+                                        pellentesque nec, egestas non nisi. Vestibulum ac diam sit amet quam vehicula
+                                        elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus
+                                        et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
+                                        vel, ullamcorper sit amet ligula. Proin eget tortor risus.</p>
+                                        <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet
+                                        elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum
+                                        porta. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus
+                                        nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed
+                                        porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum
+                                        sed sit amet dui. Proin eget tortor risus.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-2" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <h6>Products Infomation</h6>
+                                    <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+                                        Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.
+                                        Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
+                                        sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo
+                                        eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.
+                                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent
+                                        sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac
+                                        diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante
+                                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                        Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+                                        Proin eget tortor risus.</p>
+                                    <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet
+                                        elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum
+                                        porta. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus
+                                        nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-3" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <h6>Products Infomation</h6>
+                                    <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+                                        Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.
+                                        Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
+                                        sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo
+                                        eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.
+                                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent
+                                        sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac
+                                        diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante
+                                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                        Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+                                        Proin eget tortor risus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <!-- Product Details Section End -->
 
+    <!-- Related Product Section Begin -->
+    <section class="related-product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2>Los usuarios tambien vieron:</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <?php
+                  foreach($Productos->getProductosProductRandom($_GET) as $prod){
+              ?>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
+                          <div class="featured__item__text">
+                              <a href="productos_detalle.php?prod=<?php echo $prod['id']?>"><img src="img/pagina_productos/<?php echo $prod['id']?>.jpg" alt=""></a>
+                              <h4><?php echo $prod['nombre']?></h4>
+                              <h5><?php echo $prod['modelo']?></h5>
+                              <h7>$ <?php echo $prod['precio']?></strong></h7>
+                              <p>Stock: <?php echo $prod['cantidad']?></p>
+                          </div>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><?php echo $prod['modelo']?></h6>
+                            <h5>$ <?php echo $prod['precio']?></h5>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
 
-				
-	
+            </div>
+        </div>
+    </section>
+    <!-- Related Product Section End -->
 
-        <?php
+         <?php
         include_once('partes/footer.php')
         ?>

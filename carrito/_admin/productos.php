@@ -52,10 +52,15 @@ require('inc/header.php');
               <thead>
                 <tr>
                   <th>ID</th>
+				  <th>Marca_id</th>
+				  <th>Categoria_id</th>
                   <th>Nombre</th>
 				  <th>Modelo</th>
 				  <th>Precio</th>
                   <th>Cant. Stock</th> 
+				  <th>Destacado</th> 
+				  <th>Puntuacion</th> 
+				  <th>Sub_categoria</th> 
 				  <th>Descripcion</th> 
 				  <th>Acciones</th>
                 </tr>
@@ -75,14 +80,20 @@ require('inc/header.php');
 			<tbody> 
 
 						<td><?php echo $prod['id']?></td>
+						<td><?php echo $prod['marca_id']?></td> 
+						<td><?php echo $prod['categoria_id']?></td> 
 						<td><?php echo $prod['nombre']?></td>
 						<td><?php echo $prod['modelo']?></td>
 						<td><?php echo $prod['precio']?></td>
 						<td><?php echo $prod['cantidad']?></td> 
+						<td><?php echo $prod['destacado']?></td> 
+						<td><?php echo $prod['puntuacion']?></td> 
+						<td><?php echo $prod['sub_categoria']?></td> 
 						<td><?php echo $prod['descripcion']?></td> 
+						
 						<td>
 						<a href="productos_ae.php?edit=<?php echo $prod['id']?>"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
-							  <a href="productos_ae.php?del=<?php echo $prod['id']?>"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
+							  <a href="productos.php?del=<?php echo $prod['id']?>"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
 						</td>
 					  </tr>         
 			</tbody>

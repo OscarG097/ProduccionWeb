@@ -6,7 +6,7 @@ require('inc/header.php');
       
       <?php $CategoriaMenu = 'Categorias';
 	  
-	//$productos = new Productos($con);
+	$categorias = new Categorias($con);
 	include('inc/side_bar.php');
 	 
 	 

@@ -12,19 +12,17 @@ require('inc/header.php');
 				print "Error!: " . $e->getMessage();
 				die();
 		}
-      
+      	
+	$cate = new Categorias($con); 
       $CategoriaMenu = 'categorias';
 	include('inc/side_bar.php');
-	//include('clases/productos.php');
-	
-	//$productos = new Perfil($con); 
 	
 	$query = 'SELECT * FROM categorias';
     $categorias = $con->query($query);
   
 	
-	if(isset($_GET['kjk'])){
-		$categorias = $cate->get($_GET['ekjkdit']); 
+	if(isset($_GET['edit'])){
+		$categorias = $cate->get($_GET['edit']); 
 		 //var_dump($perfiles);
  } 
 	?>
@@ -37,7 +35,7 @@ require('inc/header.php');
           </p>
           
 	  <h1 class="page-header">
-                   Modificacion de Categorias
+                   Modificacion o Carga de Categorias
           </h1>
   
           <div class="col-md-2"></div>

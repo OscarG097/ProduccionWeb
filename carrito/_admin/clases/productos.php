@@ -63,26 +63,23 @@ class Productos{
           $sql = 'SELECT id,nombre,modelo,precio,cantidad,destacado,puntuacion,sub_categoria,descripcion
                     FROM productos
                     WHERE id = '.$productos->id;
-                    
-          foreach($this->con->query($sql) as $productos){
-              $productos->prod[] = $produ['id'];
-          }
+
+             
+         
           /*echo '<pre>';
           var_dump($perfil);echo '</pre>'; */
           return $productos;
   }
 
-  public function del($id){
+public function del($id){
       $query = 'SELECT count(1) as cantidad FROM productos WHERE id = '.$id;
       $consulta = $this->con->query($query)->fetch(PDO::FETCH_OBJ);
       if($consulta->cantidad == 0){
-          $query = "DELETE FROM productos WHERE id = ".$id."; 
-                    DELETE FROM perfil_permisos WHERE perfil_id = ".$id.";";
-
+          $query = "DELETE FROM productos WHERE id = ".$id;
           $this->con->exec($query); 
           return 1;
       }
-      
+
   }
   
   /**

@@ -5,6 +5,8 @@ include('../inc/db_data.php');
 include('clases/usuarios.php');
 include('clases/perfil.php');
 include('clases/productos.php');
+include('clases/categorias.php');
+include('clases/marcas.php');
 
 
 

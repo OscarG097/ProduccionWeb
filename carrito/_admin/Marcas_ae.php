@@ -12,19 +12,16 @@ require('inc/header.php');
 				print "Error!: " . $e->getMessage();
 				die();
 		}
-      
+      	$marca = new Marcas($con); 
       $marcasMenu = 'marcas';
 	include('inc/side_bar.php');
-	//include('clases/productos.php');
-	
-	//$productos = new Perfil($con); 
-	
+
 	$query = 'SELECT * FROM marcas';
     $marcas = $con->query($query);
   
 	
-	if(isset($_GET['pito'])){
-		$marcas = $mar->get($_GET['pito']); 
+	if(isset($_GET['edit'])){
+		$marcas = $marca->get($_GET['edit']); 
 		 //var_dump($perfiles);
  } 
 	?>
@@ -45,7 +42,7 @@ require('inc/header.php');
                 <div class="form-group">
                     <label for="nombre" class="col-sm-2 control-label">Nombre</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="<?php echo (isset($marcas->nombre)?$productos->nombre:'');?>">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="<?php echo (isset($marcas->nombre)?$marcas->nombre:'');?>">
                     </div>
 					</div> 
                  

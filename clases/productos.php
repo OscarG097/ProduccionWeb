@@ -66,5 +66,6 @@ class Productos{
 
     public function getProductosProductRandom(){
         return $this->con->query("SELECT * FROM productos ORDER BY rand() LIMIT 4");
+
     }
 }

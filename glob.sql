@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2020 a las 06:44:48
--- Versión del servidor: 10.4.13-MariaDB
--- Versión de PHP: 7.4.8
+-- Tiempo de generación: 24-11-2020 a las 19:50:23
+-- Versión del servidor: 10.4.11-MariaDB
+-- Versión de PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -86,33 +86,34 @@ CREATE TABLE `productos` (
   `cantidad` int(11) NOT NULL,
   `destacado` tinyint(1) NOT NULL,
   `puntuacion` int(11) NOT NULL,
-  `sub_categoria` int(11) DEFAULT NULL
+  `sub_categoria` int(11) DEFAULT NULL,
+  `Descripcion` varchar(500) COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id`, `marca_id`, `categoria_id`, `nombre`, `modelo`, `precio`, `cantidad`, `destacado`, `puntuacion`, `sub_categoria`) VALUES
-(2, 1, 9, 'Botin Adidas', 'Predator 19.4', 30, 1500, 0, 3, 1),
-(3, 2, 6, 'Guantes Nike', 'GK Spyne Pro', 30, 1000, 0, 5, 6),
-(4, 1, 3, 'Camiseta Adidas', 'Juventus \'20', 30, 1500, 0, 5, 10),
-(5, 4, 9, 'Botin Nike', 'Mercuriarl Superfly', 30, 100, 0, 5, 1),
-(6, 1, 2, 'Campera Adidas', 'Bayern Munich \'20', 30, 100, 0, 4, 10),
-(7, 2, 6, 'Canillera Nike', 'Mercurial Lite', 30, 1000, 0, 5, 6),
-(8, 2, 3, 'Camiseta Nike', 'Barcelona \'20', 30, 1000, 0, 5, 10),
-(9, 1, 6, 'Pelota Adidas', 'UCL Final \'20', 30, 1000, 0, 5, 6),
-(10, 1, 6, 'Guantes Adidas', 'BearBox Y', 30, 1000, 0, 5, 6),
-(11, 3, 8, 'Botas Boxeo Reebok', 'Master', 30, 1000, 0, 4, 1),
-(12, 1, 8, 'Calzado Adidas', 'Hockey Narma', 30, 30, 0, 4, 1),
-(13, 2, 2, 'Campera Nike', 'WindRunner', 30, 35, 0, 4, 10),
-(14, 1, 6, 'Pelota Adidas', 'Tsubasa League', 30, 1000, 1, 4, 6),
-(15, 1, 3, 'Camiseta Adidas', 'Manchester United \'20', 30, 30, 1, 5, 10),
-(16, 1, 6, 'Pelota Adidas', 'Unifornia \'20', 30, 70, 1, 4, 6),
-(17, 1, 6, 'Pelota Adidas', 'Argentum \'19', 30, 0, 1, 5, 6),
-(18, 1, 9, 'Botin Adidas', 'Nemeziz 19+', 30, 1000, 1, 4, 1),
-(19, 1, 6, 'Guantes Adidas', 'BearBox', 30, 40, 1, 4, 6),
-(20, 5, 6, 'Guantes Everlast', 'Classic', 30, 1000, 1, 5, 6);
+INSERT INTO `productos` (`id`, `marca_id`, `categoria_id`, `nombre`, `modelo`, `precio`, `cantidad`, `destacado`, `puntuacion`, `sub_categoria`, `Descripcion`) VALUES
+(2, 1, 9, 'Botin Adidas', 'Predator 19.4', 4399, 1500, 0, 3, 1, ''),
+(3, 2, 6, 'Guantes Nike', 'GK Spyne Pro', 3500, 1000, 0, 5, 6, 'Guantes De Arquero Nike Gk Match - Adulto\r\nEspuma de látex SmoothFoam en 2mm que proporciona un agarre y resistencia equilibrados.\r\nCorte flat que proporciona un ajuste holgado y una gran superficie de agarre.\r\nMuñequera abierta de PU con ajuste de velcro que permite una fácil colocación. Cinta de EVA de media vuelta con un punto de anclaje en velcro.'),
+(4, 1, 3, 'Camiseta Adidas', 'Manchester United \'20', 4999, 1500, 0, 5, 10, ''),
+(5, 4, 9, 'Botin Nike', 'Mercuriarl Superfly', 6500, 100, 0, 5, 1, 'La parte superior suave de los botines Nike Mercurial Superfly 7 Academy TF envuelve tu pie para un ajuste de segunda piel, mientras que la suela exterior de goma ayuda a sobrealimentar la tracción en el césped.\r\n\r\nAjuste de segunda piel\r\nUn forro cómodo y un collar Dynamic Fit trabajan juntos para envolver el pie y proporcionar un ajuste de segunda piel.\r\nTexturizado para el tacto\r\n'),
+(6, 1, 2, 'Campera Adidas', 'Bayern Munich \'20', 7599, 100, 0, 4, 10, ''),
+(7, 2, 6, 'Canillera Nike', 'Mercurial Lite', 2600, 1000, 0, 5, 6, ''),
+(8, 2, 3, 'Camiseta Nike', 'Barcelona \'20', 5200, 1000, 0, 5, 10, ''),
+(9, 1, 6, 'Pelota Adidas', 'UCL Final \'20', 3599, 1000, 0, 5, 6, ''),
+(10, 1, 6, 'Guantes Adidas', 'BearBox Y', 2999, 1000, 0, 5, 6, ''),
+(11, 3, 8, 'Botas Boxeo Reebok', 'Master', 9000, 1000, 0, 4, 1, 'Botas de boxeo Reebok, con ajuste aerodinámico y un agarre extraordinario. Hecho de material sintético y detalles de cuero.'),
+(12, 1, 8, 'Calzado Adidas', 'Hockey Narma', 4850, 30, 0, 4, 1, ''),
+(13, 2, 2, 'Campera Nike', 'WindRunner', 6999, 35, 0, 4, 10, ''),
+(14, 1, 6, 'Pelota Adidas', 'Tsubasa League', 3400, 1000, 1, 4, 6, ''),
+(15, 1, 3, 'Camiseta Adidas', 'Manchester United \'20', 7300, 30, 1, 5, 10, ''),
+(16, 1, 6, 'Pelota Adidas', 'Unifornia \'20', 4000, 70, 1, 4, 6, ''),
+(17, 1, 6, 'Pelota Adidas', 'Argentum \'19', 3800, 0, 1, 5, 6, ''),
+(18, 1, 9, 'Botin Adidas', 'Nemeziz 19+', 6999, 1000, 1, 4, 1, ''),
+(19, 1, 6, 'Guantes Adidas', 'BearBox', 3000, 40, 1, 4, 6, ''),
+(20, 5, 6, 'Guantes Everlast', 'Classic', 3800, 1000, 1, 5, 6, 'Cuero sintético de alta calidad. Además de su excelente construcción, ofrece durabilidad y funcionalidad. Evercool asegura transpirabilidad y confort, mientras que su tecnología anti microbiano conserva la frescura, y extiende la vida de su equipamiento.\r\n\r\n- Thumblock: Mantiene el pulgar en la posición correcta y lo protege de lesiones\r\n- Doble costura: Asegura la durabilidad\r\n- Tira de ajuste y lazo en la muñeca: Proporciona un ajuste seguro y permite ponerlos y quitarlos rápidamente\r\n');
 
 --
 -- Índices para tablas volcadas

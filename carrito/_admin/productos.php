@@ -23,7 +23,7 @@ require('inc/header.php');
 	}	
 	 
 	if(isset($_GET['del'])){
-			$resp = $perfiles->del($_GET['del']) 	;
+			$resp = $productos->del($_GET['del']) 	;
             if($resp == 1){
 				header('Location: productos.php');	
 			}
@@ -45,7 +45,7 @@ require('inc/header.php');
           </h1>
  
 
-          <h2 class="sub-header">Listado <a href="#"><button type="button" class="btn btn-success" title="Agregar">A</button></a></h2>
+          <h2 class="sub-header">Listado <a href="productos_ae.php"><button type="button" class="btn btn-success" title="Agregar">A</button></a></h2>
           <div class="table-responsive">
             <table class="table table-striped">
 				
@@ -56,6 +56,7 @@ require('inc/header.php');
 				  <th>Modelo</th>
 				  <th>Precio</th>
                   <th>Cant. Stock</th> 
+				  <th>Descripcion</th> 
 				  <th>Acciones</th>
                 </tr>
 			  </thead>
@@ -78,6 +79,7 @@ require('inc/header.php');
 						<td><?php echo $prod['modelo']?></td>
 						<td><?php echo $prod['precio']?></td>
 						<td><?php echo $prod['cantidad']?></td> 
+						<td><?php echo $prod['descripcion']?></td> 
 						<td>
 						<a href="productos_ae.php?edit=<?php echo $prod['id']?>"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
 							  <a href="productos_ae.php?del=<?php echo $prod['id']?>"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>

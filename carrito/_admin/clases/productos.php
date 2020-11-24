@@ -24,9 +24,9 @@ class Productos{
         $this->con->exec($sql);
         
         $sql = '';
-        foreach($data['permisos'] as $permisos){
-            $sql .= 'INSERT INTO perfil_permisos(perfil_id,permiso_id) 
-                        VALUES ('.$id.','.$permisos.');';
+        foreach($data['productos'] as $permisos){
+            $sql .= 'INSERT INTO productos(id,marca_id,categoria_id,modelo,nombre,precio,cantidad,destacado,puntacion,sub_categoria,descripcion) 
+                    VALUES ('.$id.','.$marca_id.','.$categoria_id.','.$modelo.','.$nombre.','.$precio.','.$cantidad.','.$destacado.','.$puntacion.','.$sub_categoria.','.$descripcion.');';
         }
         $this->con->exec($sql);
 
@@ -36,8 +36,8 @@ class Productos{
         
         $sql = '';
         foreach($data['productos'] as $productos){
-            $sql .= 'INSERT INTO productos(id,marca_id,categoria_id,modelo,nombre,precio,cantidad,destacado,puntacion) 
-                        VALUES ('.$id.','.$marca_id.','.$categoria_id.','.$modelo.','.$nombre.','.$precio.','.$cantidad.','.$destacado.','.$puntacion.');';
+            $sql .= 'INSERT INTO productos(id,marca_id,categoria_id,modelo,nombre,precio,cantidad,destacado,puntacion,sub_categoria,descripcion) 
+                        VALUES ('.$id.','.$marca_id.','.$categoria_id.','.$modelo.','.$nombre.','.$precio.','.$cantidad.','.$destacado.','.$puntacion.','.$sub_categoria.','.$descripcion.');';
         }
         $this->con->exec($sql);
          
@@ -47,20 +47,20 @@ class Productos{
 
 
   public function getList(){
-      $query = "SELECT id, nombre,modelo,precio,cantidad,destacado,puntuacion
+      $query = "SELECT id,nombre,modelo,precio,cantidad,destacado,puntuacion,sub_categoria,descripcion
                  FROM productos";
       return $this->con->query($query); 
   }
   
   public function get($id){
-      $query = "SELECT id,nombre,modelo,precio,cantidad,destacado,puntuacion
+      $query = "SELECT id,nombre,modelo,precio,cantidad,destacado,puntuacion,sub_categoria,descripcion
                  FROM productos WHERE id = ".$id;
                  
       $query = $this->con->query($query); 
           
       $productos = $query->fetch(PDO::FETCH_OBJ);
           
-          $sql = 'SELECT id,nombre,modelo,cantidad
+          $sql = 'SELECT id,nombre,modelo,precio,cantidad,destacado,puntuacion,sub_categoria,descripcion
                     FROM productos
                     WHERE id = '.$productos->id;
                     
@@ -100,20 +100,12 @@ class Productos{
               }
           }
           //var_dump($datos);die();
-          $sql = "INSERT INTO perfil(".implode(',',$columns).") VALUES('".implode("','",$datos)."')";
+          $sql = "INSERT INTO productos(".implode(',',$columns).") VALUES('".implode("','",$datos)."')";
           //echo $sql;die();
           
           $this->con->exec($sql);
           $id = $this->con->lastInsertId();
                          
-          $sql = '';
-          foreach($data['permisos'] as $permisos){
-              $sql .= 'INSERT INTO perfil_permisos(perfil_id,permiso_id) 
-                          VALUES ('.$id.','.$permisos.');';
-          }
-          //echo $sql;die();
-
-           $this->con->exec($sql);
   } 
   
   

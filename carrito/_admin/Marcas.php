@@ -47,7 +47,7 @@ require('inc/header.php');
           </h1>
  
 
-          <h2 class="sub-header">Listado <a href="#"><button type="button" class="btn btn-success" title="Agregar">A</button></a></h2>
+          <h2 class="sub-header">Listado <a href="Marcas_ae.php"><button type="button" class="btn btn-success" title="Agregar">A</button></a></h2>
           <div class="table-responsive">
             <table class="table table-striped">
 				

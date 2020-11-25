@@ -55,8 +55,8 @@
                             <li><a href="productos.php?cat=3">Camisetas</a></li>
                             <li><a href="productos.php?cat=2">Camperas</a></li>
                             <li><a href="productos.php?pcat=6">Accesorios</a></li>
-                            <li><a href="productos.php?cat=5">Buzos</a></li>
-                            <li><a href="productos.php?cat=4">Short</a></li>
+                            <li><a href="productos.php?cat=">Buzos</a></li>
+                            <li><a href="productos.php?cat=">Short</a></li>
                             <li><a href="productos.php?cat">Ver todo</a></li>
  
                         </ul>
@@ -72,8 +72,8 @@
                             <li><a href="productos.php?cat=3">Camisetas</a></li>
                             <li><a href="productos.php?cat=2">Camperas</a></li>
                             <li><a href="productos.php?pcat=6">Accesorios</a></li>
-                            <li><a href="productos.php?cat=5">Buzos</a></li>
-                            <li><a href="productos.php?cat=4">Short</a></li>
+                            <li><a href="productos.php?cat=">Buzos</a></li>
+                            <li><a href="productos.php?cat=">Short</a></li>
                             <li><a href="productos.php?pcat=10">Solo Indumentaria</a></li>
 
                         </ul>
@@ -134,9 +134,10 @@
 
             </div>
         </div>  
+        </div>  
     </section>
     <!-- Product Section End -->
-
-        <?php
+    <?php
         include_once('partes/footer.php')
         ?>
+    

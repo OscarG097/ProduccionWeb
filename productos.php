@@ -27,16 +27,90 @@
     <section class="product spad">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-5">
+         <!--   <div class="col-md-3 col-sm-5">
                     <div class="sidebar">
                         <div class="sidebar__item">
                             <h4>Productos</h4>
                                 <?php
-                                include_once('partes/menu_de_filtrado.php');
+                               // include_once('partes/menu_de_filtrado.php');
                                 ?>
                         </div>
                     </div>
+                </div> -->
+
+                <!-- prueba-->
+
+                <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Todas las Categorias</span>
+                        </div>
+                        <ul>
+                            <li><a href="productos.php?cat=9">Botines</a></li>
+                            <li><a href="productos.php?cat=8">Zapatillas</a></li>
+                            <li><a href="productos.php?cat=3">Camisetas</a></li>
+                            <li><a href="productos.php?cat=2">Camperas</a></li>
+                            <li><a href="productos.php?pcat=6">Accesorios</a></li>
+                            <li><a href="productos.php?cat=5">Buzos</a></li>
+                            <li><a href="productos.php?cat=4">Short</a></li>
+                            <li><a href="productos.php?cat">Ver todo</a></li>
+ 
+                        </ul>
+                    </div>
                 </div>
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Indumentaria</span>
+                        </div>
+                        <ul>
+                            <li><a href="productos.php?cat=3">Camisetas</a></li>
+                            <li><a href="productos.php?cat=2">Camperas</a></li>
+                            <li><a href="productos.php?pcat=6">Accesorios</a></li>
+                            <li><a href="productos.php?cat=5">Buzos</a></li>
+                            <li><a href="productos.php?cat=4">Short</a></li>
+                            <li><a href="productos.php?pcat=10">Solo Indumentaria</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Calzado</span>
+                        </div>
+                        <ul>
+                            <li><a href="productos.php?cat=9">Botines</a></li>
+                            <li><a href="productos.php?cat=8">Zapatillas</a></li>
+                            <li><a href="productos.php?pcat=1">Solo Calzado</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Marcas</span>
+                        </div>
+                        <ul>
+                            <li><a href="productos.php?marca=1">Adidas</a></li>
+                            <li><a href="productos.php?marca=2">Nike</a></li>
+                            <li><a href="productos.php?marca=3">Reebok</a></li>
+                            <li><a href="productos.php?marca=4">Topper</a></li>
+                            <li><a href="productos.php?marca=5">Everlast</a></li>
+                            <li><a href="productos.php?marca=">Ver Todas</a></li>
+                        </ul>
+                    </div>
+                </div>
+           
+
+                 <!-- prueba-->
                     <?php
                     foreach($Productos->getProductos($_GET) as $prod){
                     ?>
@@ -57,6 +131,7 @@
                         </div>
                     </div>
                 <?php } ?>
+
             </div>
         </div>  
     </section>

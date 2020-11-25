@@ -25,8 +25,8 @@ class Productos{
         
         $sql = '';
         foreach($data['productos'] as $permisos){
-            $sql .= 'INSERT INTO productos(id,marca_id,categoria_id,modelo,nombre,precio,cantidad,destacado,puntacion,sub_categoria,descripcion) 
-                    VALUES ('.$id.','.$marca_id.','.$categoria_id.','.$modelo.','.$nombre.','.$precio.','.$cantidad.','.$destacado.','.$puntacion.','.$sub_categoria.','.$descripcion.');';
+            $sql .= 'INSERT INTO productos(id,marca_id,categoria_id,modelo,nombre,precio,cantidad,destacado,puntacion,sub_categoria,descripcion,informacion) 
+                    VALUES ('.$id.','.$marca_id.','.$categoria_id.','.$modelo.','.$nombre.','.$precio.','.$cantidad.','.$destacado.','.$puntacion.','.$sub_categoria.','.$descripcion.','.$informacion.');';
         }
         $this->con->exec($sql);
 
@@ -36,8 +36,8 @@ class Productos{
         
         $sql = '';
         foreach($data['productos'] as $productos){
-            $sql .= 'INSERT INTO productos(id,marca_id,categoria_id,modelo,nombre,precio,cantidad,destacado,puntacion,sub_categoria,descripcion) 
-                        VALUES ('.$id.','.$marca_id.','.$categoria_id.','.$modelo.','.$nombre.','.$precio.','.$cantidad.','.$destacado.','.$puntacion.','.$sub_categoria.','.$descripcion.');';
+            $sql .= 'INSERT INTO productos(id,marca_id,categoria_id,modelo,nombre,precio,cantidad,destacado,puntacion,sub_categoria,descripcion,informacion) 
+            VALUES ('.$id.','.$marca_id.','.$categoria_id.','.$modelo.','.$nombre.','.$precio.','.$cantidad.','.$destacado.','.$puntacion.','.$sub_categoria.','.$descripcion.','.$informacion.');';
         }
         $this->con->exec($sql);
          
@@ -47,27 +47,23 @@ class Productos{
 
 
   public function getList(){
-      $query = "SELECT id,nombre,modelo,precio,cantidad,destacado,puntuacion,sub_categoria,descripcion
+      $query = "SELECT id,marca_id,categoria_id,modelo,nombre,precio,cantidad,destacado,puntacion,sub_categoria,descripcion,informacion
                  FROM productos";
       return $this->con->query($query); 
   }
   
   public function get($id){
-      $query = "SELECT id,nombre,modelo,precio,cantidad,destacado,puntuacion,sub_categoria,descripcion
+      $query = "SELECT id,marca_id,categoria_id,nombre,modelo,precio,cantidad,destacado,puntuacion,sub_categoria,descripcion,informacion
                  FROM productos WHERE id = ".$id;
                  
       $query = $this->con->query($query); 
           
       $productos = $query->fetch(PDO::FETCH_OBJ);
           
-          $sql = 'SELECT id,nombre,modelo,precio,cantidad,destacado,puntuacion,sub_categoria,descripcion
+          $sql = 'SELECT id,marca_id,categoria_id,nombre,modelo,precio,cantidad,destacado,puntuacion,sub_categoria,descripcion,informacion
                     FROM productos
                     WHERE id = '.$productos->id;
 
-             
-         
-          /*echo '<pre>';
-          var_dump($perfil);echo '</pre>'; */
           return $productos;
   }
 
@@ -75,11 +71,12 @@ public function del($id){
       $query = 'SELECT count(1) as cantidad FROM productos WHERE id = '.$id;
       $consulta = $this->con->query($query)->fetch(PDO::FETCH_OBJ);
       if($consulta->cantidad == 0){
-          $query = "DELETE FROM productos WHERE id = ".$id;
-          $this->con->exec($query); 
+          $sql = 'DELETE FROM productos WHERE id= '.$id;
+
+          $this->con->exec($sql); 
           return 1;
       }
-
+      return 'No se pudo borrar';
   }
   
   /**
@@ -101,8 +98,18 @@ public function del($id){
           //echo $sql;die();
           
           $this->con->exec($sql);
-          $id = $this->con->lastInsertId();
-                         
+         /* $id = $this->con->lastInsertId();
+
+          $sql = '';
+			foreach($data['productos'] as $productos){
+				$sql .= 'INSERT INTO perfil_permisos(perfil_id,permiso_id) 
+                            VALUES ('.$id.','.$permisos.');';
+                            
+                        }
+                        
+            
+                         $this->con->exec($sql);
+                       */ 
   } 
   
   

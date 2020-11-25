@@ -43,7 +43,18 @@ require('inc/header.php');
           <div class="col-md-2"></div>
             <form action="productos.php" method="post" class="col-md-6 from-horizontal">
                 <div class="form-group">
-          
+                    <label for="id" class="col-sm-2 control-label">id</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="id" name="id" placeholder="" value="<?php echo (isset($productos->id)?$productos->id:'');?>">
+                    </div>
+                    <label for="marca_id" class="col-sm-2 control-label">marca_id</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="marca_id" name="marca_id" placeholder="" value="<?php echo (isset($productos->marca_id)?$productos->marca_id:'');?>">
+                    </div>
+                    <label for="categoria_id" class="col-sm-2 control-label">categoria_id</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="categoria_id" name="categoria_id" placeholder="" value="<?php echo (isset($productos->categoria_id)?$productos->categoria_id:'');?>">
+                    </div>
                     <label for="nombre" class="col-sm-2 control-label">Nombre</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="<?php echo (isset($productos->nombre)?$productos->nombre:'');?>">
@@ -75,6 +86,10 @@ require('inc/header.php');
                     <label for="descripcion" class="col-sm-2 control-label">Descripcion</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="" value="<?php echo (isset($productos->descripcion)?$productos->descripcion:'');?>">
+                    </div>
+                    <label for="informacion" class="col-sm-2 control-label">Informacion</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="informacion" name="informacion" placeholder="" value="<?php echo (isset($productos->informacion)?$productos->informacion:'');?>">
                     </div>
 					</div> 
                  

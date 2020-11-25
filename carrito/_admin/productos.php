@@ -62,6 +62,7 @@ require('inc/header.php');
 				  <th>Puntuacion</th> 
 				  <th>Sub_categoria</th> 
 				  <th>Descripcion</th> 
+				  <th>Informacion</th> 
 				  <th>Acciones</th>
                 </tr>
 			  </thead>
@@ -90,6 +91,8 @@ require('inc/header.php');
 						<td><?php echo $prod['puntuacion']?></td> 
 						<td><?php echo $prod['sub_categoria']?></td> 
 						<td><?php echo $prod['descripcion']?></td> 
+						<td><?php echo $prod['informacion']?></td> 
+
 						
 						<td>
 						<a href="productos_ae.php?edit=<?php echo $prod['id']?>"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>

@@ -17,6 +17,7 @@
 				<ul>
 				<?php foreach($sub as $scat){?>
 					<li>
+					
 						<a href="productos.php?cat=<?php echo $scat['id']?>" >
 						<h6><?php echo $scat['nombre']?></h6>
 						</a>
@@ -59,7 +60,8 @@
 				<li><a href="productos.php?order=ZA&marca=<?php echo (isset($_GET['marca'])?$_GET['marca']:'') ?>&cat=<?php echo isset($_GET['cat'])?$_GET['cat']:''?>"><span class="icon-chevron-right"></span>Z-A</a></li>
 				<li><a href="productos.php?order=&marca=<?php echo (isset($_GET['marca'])?$_GET['marca']:'') ?>&cat=<?php echo isset($_GET['cat'])?$_GET['cat']:''?>"><span class="icon-chevron-right"></span>Destacados</a></li>
 				-->
-				
+		
+
                 <span>Ordenado Por</span>
                 <select onchange="ordenamiento()" id="order">
                     <option value="AZ">A-Z</option>

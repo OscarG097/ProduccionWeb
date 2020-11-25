@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-11-2020 a las 23:28:33
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.5
+-- Tiempo de generación: 24-11-2020 a las 23:50:52
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -109,7 +109,7 @@ INSERT INTO `productos` (`id`, `marca_id`, `categoria_id`, `nombre`, `modelo`, `
 (12, 1, 8, 'Calzado Adidas', 'Hockey Narma', 4850, 30, 0, 4, 1, 'Ajuste clásico\r\nExterior sintético con revestimientos sellados\r\nSuela de caucho con diseño de huella armónica. Forro interno textil\r\nMediasuela de EVA. Amortiguación de espuma en la punta\r\nEstructura parcial tipo media que sujeta el pie', 'Marca	Adidas\r\nModelo	Fabela Rise\r\nEdad	Adultos'),
 (13, 2, 2, 'Campera Nike', 'WindRunner', 6999, 35, 0, 4, 10, 'NIKE / DIGITAL SPORT - TIENDA OFICIAL\r\nPRODUCTOS 100% ORIGINALES\r\n\r\n-NOMBRE: CAMPERA WINDRUNNER NSW\r\n-GÉNERO: HOMBRE\r\n-MARCA: nike\r\n-ARTÍCULO: AR2191100\r\n\r\nCampera para hombres Nike Windrunner NSW', 'Marca	Nike\r\nModelo	304-3378'),
 (14, 1, 6, 'Pelota Adidas', 'Tsubasa League', 3400, 1000, 1, 4, 6, 'Exterior con recubrimiento 100% TPU.\r\nResistente y suave al tacto.\r\nCámara de butilo.\r\nNro. 5.\r\nCosida a máquina.\r\nEstampados Uniforia.\r\nRequiere ser inflada.', 'Marca	Adidas\r\nModelo	FS0390\r\nTamaño de la pelota	5'),
-(15, 1, 3, 'Camiseta Adidas', 'Manchester United \'20', 7300, 30, 1, 5, 10, 'CAMISETA DE MANCHESTER UNITED 2018\r\n\r\nMODELO: TITULAR\r\n\r\nTALLE: M\r\n\r\nMEDIDAS: 52cm de axila a axila por 73cm de largo\r\n\r\nMARCA: ADIDAS\r\n\r\nNUMERO: 9 LUKAKU', 'Marca	Adidas\r\nEquipo	Manchester United\r\nTipo de camiseta	Titular\r\nTipo de ocasión	Partido\r\nVersión de la camiseta	Auténtica\r\nTemporada	2018/2019\r\nEs para arquero	No\r\nNúmero de la camiseta	9\r\nEdición especial de la camiseta	PREMIER'),
+(15, 1, 3, 'Camiseta Adidas', 'Juventus \'20', 7300, 30, 1, 5, 10, 'CAMISETA DE JUVENTUS 2020\r\n\r\nMODELO: TITULAR\r\n\r\nTALLE: M\r\n\r\nMEDIDAS: 52cm de axila a axila por 73cm de largo\r\n\r\nMARCA: ADIDAS\r\n\r\nNUMERO: 9 LUKAKU', 'Marca	Adidas\r\nEquipo	JUVENTUS\r\nTipo de camiseta	Titular\r\nTipo de ocasión	Partido\r\nVersión de la camiseta	Auténtica\r\nTemporada	2018/2019\r\nEs para arquero	No\r\nNúmero de la camiseta	9\r\nEdición especial de la camiseta	PREMIER'),
 (16, 1, 6, 'Pelota Adidas', 'Unifornia \'20', 4000, 70, 1, 4, 6, 'Exterior con recubrimiento 100% TPU.\r\nResistente y suave al tacto.\r\nCámara de butilo.\r\nNro. 5.\r\nCosida a máquina.\r\nEstampados Uniforia.\r\nRequiere ser inflada.', 'Marca	Adidas\r\nModelo	FH7355\r\nTamaño de la pelota	5'),
 (17, 1, 6, 'Pelota Adidas', 'Argentum \'19', 3800, 0, 1, 5, 6, 'Exterior con recubrimiento 100% TPU.\r\nResistente y suave al tacto.\r\nCámara de butilo.\r\nNro. 5.\r\nCosida a máquina.\r\nEstampados Uniforia.\r\nRequiere ser inflada.', 'Marca	Adidas\r\nModelo	FH7355\r\nTamaño de la pelota	5'),
 (18, 1, 9, 'Botin Adidas', 'Nemeziz 19+', 6999, 1000, 1, 4, 1, 'Sistema de atado de cordones\r\nExterior sintético suave\r\nSuela liviana de TPU. Configuración de tapones Agility\r\nColor del artículo: Tech Indigo / Signal Green / Glory Purple', 'Marca	Adidas\r\nModelo	Nemezis Messi 19.3\r\nTipo de suela	FG\r\nEdad	Adulto'),

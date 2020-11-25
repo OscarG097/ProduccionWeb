@@ -48,9 +48,9 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="primary-btn">
-							ingresar
-						</button>
+						<button class="primary-btn"><a href="index.php">
+							Ingresar
+						</a></button>
 					</div>
 
 					<div class="flex-col-c p-t-170 p-b-40">

@@ -23,7 +23,7 @@ class Productos{
         //echo $sql; die();
         $this->con->exec($sql);
         
-        $sql = '';
+       /* $sql = '';
         foreach($data['productos'] as $permisos){
             $sql .= 'INSERT INTO productos(id,marca_id,categoria_id,modelo,nombre,precio,cantidad,destacado,puntacion,sub_categoria,descripcion,informacion) 
                     VALUES ('.$id.','.$marca_id.','.$categoria_id.','.$modelo.','.$nombre.','.$precio.','.$cantidad.','.$destacado.','.$puntacion.','.$sub_categoria.','.$descripcion.','.$informacion.');';
@@ -39,8 +39,7 @@ class Productos{
             $sql .= 'INSERT INTO productos(id,marca_id,categoria_id,modelo,nombre,precio,cantidad,destacado,puntacion,sub_categoria,descripcion,informacion) 
             VALUES ('.$id.','.$marca_id.','.$categoria_id.','.$modelo.','.$nombre.','.$precio.','.$cantidad.','.$destacado.','.$puntacion.','.$sub_categoria.','.$descripcion.','.$informacion.');';
         }
-        $this->con->exec($sql);
-         
+        $this->con->exec($sql);*/       
 } 
 
 //cosas agregadas
@@ -68,7 +67,14 @@ class Productos{
   }
 
 public function del($id){
-      $query = 'SELECT count(1) as cantidad FROM productos WHERE id = '.$id;
+
+
+    $sql = 'DELETE FROM productos WHERE id= '.$id;
+    //echo $sql; die();
+          $this->con->exec($sql); 
+
+
+      /*$query = 'SELECT count(1) as cantidad FROM productos WHERE id = '.$id;
       $consulta = $this->con->query($query)->fetch(PDO::FETCH_OBJ);
       if($consulta->cantidad == 0){
           $sql = 'DELETE FROM productos WHERE id= '.$id;
@@ -76,7 +82,8 @@ public function del($id){
           $this->con->exec($sql); 
           return 1;
       }
-      return 'No se pudo borrar';
+      return 'No se pudo borrar'; */
+
   }
   
   /**
@@ -93,11 +100,12 @@ public function del($id){
                   }
               }
           }
-          //var_dump($datos);die();
-          $sql = "INSERT INTO productos(".implode(',',$columns).") VALUES('".implode("','",$datos)."')";
-          //echo $sql;die();
-          
+         
+          $sql = "INSERT INTO productos(".implode(',',$columns).") VALUES('".implode("','",$datos)."')";  
+          //echo $sql; die();      
           $this->con->exec($sql);
+
+
          /* $id = $this->con->lastInsertId();
 
           $sql = '';

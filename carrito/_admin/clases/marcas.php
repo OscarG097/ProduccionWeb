@@ -23,7 +23,7 @@ class Marcas{
         //echo $sql; die();
         $this->con->exec($sql);
         
-        $sql = '';
+        /*$sql = '';
         foreach($data['marcas'] as $permisos){
             $sql .= 'INSERT INTO marcas(id,nombre) 
                     VALUES ('.$id.','.$nombre.');';
@@ -39,7 +39,7 @@ class Marcas{
             $sql .= 'INSERT INTO marcas(id,nombre) 
                  VALUES ('.$id.','.$nombre.');';
         }
-        $this->con->exec($sql);
+        $this->con->exec($sql);*/
          
 } 
 
@@ -68,7 +68,12 @@ class Marcas{
   }
 
   public function del($id){
-      $query = 'SELECT count(1) as cantidad FROM marcas WHERE id = '.$id;
+
+    $sql = 'DELETE FROM marcas WHERE id= '.$id;
+   // echo $sql; die();
+          $this->con->exec($sql); 
+
+     /* $query = 'SELECT count(1) as cantidad FROM marcas WHERE id = '.$id;
       $consulta = $this->con->query($query)->fetch(PDO::FETCH_OBJ);
       if($consulta->cantidad == 0){
           $query = "DELETE FROM marcas WHERE id = ".$id; 
@@ -77,7 +82,7 @@ class Marcas{
           $this->con->exec($query); 
           return 1;
       }
-      
+      */
   }
   
   /**
@@ -99,7 +104,6 @@ class Marcas{
           //echo $sql;die();
           
           $this->con->exec($sql);
-          $id = $this->con->lastInsertId();
                          
   } 
   

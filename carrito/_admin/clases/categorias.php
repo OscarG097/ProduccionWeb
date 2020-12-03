@@ -23,7 +23,7 @@ class Categorias{
         //echo $sql; die();
         $this->con->exec($sql);
         
-        $sql = '';
+       /* $sql = '';
         foreach($data['categorias'] as $permisos){
             $sql .= 'INSERT INTO categorias(id,nombre,padre_id) 
                     VALUES ('.$id.','.$nombre.','.$padre_id.');';
@@ -39,7 +39,7 @@ class Categorias{
             $sql .= 'INSERT INTO categorias(id,nombre,padre_id) 
             VALUES ('.$id.','.$nombre.','.$padre_id.');';
         }
-        $this->con->exec($sql);
+        $this->con->exec($sql); */
          
 } 
 
@@ -68,7 +68,12 @@ class Categorias{
   }
 
   public function del($id){
-      $query = 'SELECT count(1) as cantidad FROM categorias WHERE id = '.$id;
+
+    $sql = 'DELETE FROM categorias WHERE id= '.$id;
+    //echo $sql; die();
+          $this->con->exec($sql); 
+
+     /* $query = 'SELECT count(1) as cantidad FROM categorias WHERE id = '.$id;
       $consulta = $this->con->query($query)->fetch(PDO::FETCH_OBJ);
       if($consulta->cantidad == 0){
           $query = "DELETE FROM categorias WHERE id = ".$id; 
@@ -76,7 +81,7 @@ class Categorias{
 
           $this->con->exec($query); 
           return 1;
-      }
+      } */
       
   }
   

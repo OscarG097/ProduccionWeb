@@ -1,10 +1,11 @@
 <?php 
 require('inc/header.php');
+require('inc/glob.php');
 ?> 
 
 <div class="container-fluid">
       
-      <?php $CategoriaMenu = 'Categorias';
+      <?php $CategoriaMenu = 'categorias';
 	  
 	$categorias = new Categorias($con);
 	include('inc/side_bar.php');
@@ -12,18 +13,18 @@ require('inc/header.php');
 	 
 	if(isset($_POST['formulario_categoria'])){ 
 	    if($_POST['id'] > 0){
-                $categoria->edit($_POST); 
+                $categorias->edit($_POST); 
                
 	    }else{
 			
-                $categoria->save($_POST); 
+                $categorias->save($_POST); 
         }
 		
 		header('Location: Categorias.php');
 	}	
 	 
 	if(isset($_GET['del'])){
-			$resp = $perfiles->del($_GET['del']) 	;
+			$resp = $categorias->del($_GET['del']) 	;
             if($resp == 1){
 				header('Location: Categorias.php');	
 			}
@@ -61,12 +62,12 @@ require('inc/header.php');
 			  
 
 			 <?php
-			  try {
+		/*	 try {
 				$con = new PDO('mysql:host='.$hostname.';port='.$port.';dbname='.$database='glob', $username, $password);
 		} catch (PDOException $e) {
 				print "Error!: " . $e->getMessage();
 				die();
-		}
+		}*/
 
 		foreach($con->query('SELECT * from categorias') as $cat){ ?>
 

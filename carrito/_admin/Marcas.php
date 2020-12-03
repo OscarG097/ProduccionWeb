@@ -1,5 +1,6 @@
 <?php 
 require('inc/header.php');
+require('inc/glob.php');
 ?> 
 
 <div class="container-fluid">
@@ -23,7 +24,7 @@ require('inc/header.php');
 	}	
 	 
 	if(isset($_GET['del'])){
-			$resp = $perfiles->del($_GET['del']) 	;
+			$resp = $marcas->del($_GET['del']) 	;
             if($resp == 1){
 				header('Location: Marcas.php');	
 			}
@@ -60,12 +61,12 @@ require('inc/header.php');
 			  
 
 			 <?php
-			  try {
+			/*  try {
 				$con = new PDO('mysql:host='.$hostname.';port='.$port.';dbname='.$database='glob', $username, $password);
 		} catch (PDOException $e) {
 				print "Error!: " . $e->getMessage();
 				die();
-		}
+		}*/
 
 		foreach($con->query('SELECT * from marcas') as $mar){ ?>
 

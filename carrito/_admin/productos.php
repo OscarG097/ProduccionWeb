@@ -1,5 +1,6 @@
 <?php 
 require('inc/header.php');
+require('inc/glob.php');
 ?> 
 
 <div class="container-fluid">
@@ -15,7 +16,7 @@ require('inc/header.php');
                 $productos->edit($_POST); 
                
 	    }else{
-			
+				
                 $productos->save($_POST); 
         }
 		
@@ -69,12 +70,13 @@ require('inc/header.php');
 			  
 
 			 <?php
-			  try {
+
+			  /*try {
 				$con = new PDO('mysql:host='.$hostname.';port='.$port.';dbname='.$database='glob', $username, $password);
 		} catch (PDOException $e) {
 				print "Error!: " . $e->getMessage();
 				die();
-		}
+		}*/
 
 		foreach($con->query('SELECT * from productos') as $prod){ ?>
 

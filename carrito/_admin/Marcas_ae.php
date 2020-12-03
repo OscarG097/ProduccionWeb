@@ -1,17 +1,19 @@
 <?php 
 require('inc/header.php');
+require('inc/glob.php');
  
 ?> 
 
 <div class="container-fluid">
 
 <?php
-			  try {
+		/*	  try {
 				$con = new PDO('mysql:host='.$hostname.';port='.$port.';dbname='.$database='glob', $username, $password);
 		} catch (PDOException $e) {
 				print "Error!: " . $e->getMessage();
 				die();
-		}
+    }*/
+    
       	$marca = new Marcas($con); 
       $marcasMenu = 'marcas';
 	include('inc/side_bar.php');
@@ -34,22 +36,23 @@ require('inc/header.php');
           </p>
           
 	  <h1 class="page-header">
-                   Modificacion de Marcas
+                   Modificacion o Creacion de Marcas
           </h1>
   
           <div class="col-md-2"></div>
-            <form action="productos.php" method="post" class="col-md-6 from-horizontal">
+            <form action="Marcas.php" method="post" class="col-md-6 from-horizontal">
                 <div class="form-group">
                     <label for="nombre" class="col-sm-2 control-label">Nombre</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="<?php echo (isset($marcas->nombre)?$marcas->nombre:'');?>">
                     </div>
+
 					</div> 
                  
                  
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-default" name="formulario_productos" >Guardar</button>
+                    <button type="submit" class="btn btn-default" name="formulario_marcas" >Guardar</button>
                     </div>
                 </div> 
                 <input type="hidden" class="form-control" id="id" name="id" placeholder="" value="<?php echo (isset($marcas->id)?$marcas->id:'');?>">

@@ -7,6 +7,38 @@
         include_once('partes/menu-superior.php')
         ?>
 
+        <!--prueba-->
+     
+
+                    <?php
+                        
+                    $comen = new Comentarios($con); 
+                    $comentariosmenu = 'comentarios';
+                
+                    $query = 'SELECT * FROM productos INNER JOIN productos_comentario_dinamico INNER JOIN comentario_campo_dinamico';
+                    $comentario = $con->query($query);
+                    if(isset($_GET['edit'])){
+                    $comentario = $comen->get($_GET['edit']); 
+                    
+                    } 
+                    ?>
+
+                    <?php                         
+                        if(isset($_POST['formulario_comentarios'])){ 
+                            if($_POST['id'] > 0){
+                                 $comentario->edit($_POST); 
+                                    
+                            }else{
+                                $comentario->save($_POST); 
+                            }
+                            
+                            header('Location: productos_detalle.php');
+                        }	
+                            ?>
+        <!--prueba-->
+
+
+
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="img/banner.jpg">
         <div class="container">
@@ -116,7 +148,59 @@
                             <div class="tab-pane" id="tabs-2" role="tabpanel">
                                 <div class="product__details__tab__desc">
                                     <h6>Comentarios</h6>
-                                    <p></p>
+                                    <p>hola</p>
+
+
+
+
+
+                                    <!--prueba-->
+
+
+
+                                    <div class="col-md-2"></div>
+            <form action="productos_detalle.php" method="post" class="col-md-6 from-horizontal">
+                <div class="form-group">                 
+
+
+                                    <label for="mail" class="col-sm-2 control-label">mail</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="mail" name="mail" placeholder="" value="<?php echo (isset($comentario->mail)?$comentario->mail:'');?>">
+                    </div>  
+                    <label for="comentario" class="col-sm-2 control-label">comentario</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="comentario" name="comentario" placeholder="" value="<?php echo (isset($comentario->comentario)?$comentario->comentario:'');?>">
+                    </div>   
+                 
+
+                    
+                    <label for="mail" class="col-sm-2 control-label">mail</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="mail" name="mail" placeholder="" value="<?php echo (isset($comentario->mail)?$comentario->mail:'');?>">
+                    </div>  
+                    <label for="comentario" class="col-sm-2 control-label">comentario</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="comentario" name="comentario" placeholder="" value="<?php echo (isset($comentario->comentario)?$comentario->comentario:'');?>">
+                    </div>   
+
+                 
+                 
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default" name="formulario_comentarios" >Guardar</button>
+                    </div>
+                </div> 
+                <input type="hidden" class="form-control" id="id" name="id" placeholder="" value="<?php echo (isset($comentario->id)?$comentario->id:'');?>">
+
+            </form>
+          </div> 
+
+
+                                    <!--prueba-->
+
+
+
+
                                 </div>
                             </div>
                         </div>

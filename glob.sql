@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-12-2020 a las 01:54:47
+-- Tiempo de generación: 09-12-2020 a las 00:43:39
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.2.34
 
@@ -50,6 +50,31 @@ INSERT INTO `categorias` (`id`, `nombre`, `padre_id`) VALUES
 (12, 'ojotas ', 1),
 (13, 'Medias', 10),
 (14, 'Llaveros', 6);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `apellido` varchar(50) NOT NULL,
+  `usuario` varchar(30) NOT NULL,
+  `contraseña` varchar(50) NOT NULL,
+  `email` varchar(70) NOT NULL,
+  `activo` int(11) NOT NULL,
+  `salt` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id`, `nombre`, `apellido`, `usuario`, `contraseña`, `email`, `activo`, `salt`) VALUES
+(1, 'Admin', 'Sistema', 'admin', '207acd61a3c1bd506d7e9a4535359f8a', 'admin@carrito.com', 1, 'salt'),
+(2, 'Lucas', 'Basualdo', 'kyros', 'd5036aae347bf575455f3238ab9cb13d', 'basualdo1995@gmail.com', 1, '5fcf9cb490874');
 
 -- --------------------------------------------------------
 
@@ -170,8 +195,7 @@ INSERT INTO `productos` (`id`, `marca_id`, `categoria_id`, `nombre`, `modelo`, `
 (17, 1, 6, 'Pelota Adidas', 'Argentum \'19', 3800, 0, 1, 5, 6, 'Exterior con recubrimiento 100% TPU.\r\nResistente y suave al tacto.\r\nCámara de butilo.\r\nNro. 5.\r\nCosida a máquina.\r\nEstampados Uniforia.\r\nRequiere ser inflada.', 'Marca	Adidas\r\nModelo	FH7355\r\nTamaño de la pelota	5'),
 (18, 1, 9, 'Botin Adidas', 'Nemeziz 19+', 6999, 1000, 1, 4, 1, 'Sistema de atado de cordones\r\nExterior sintético suave\r\nSuela liviana de TPU. Configuración de tapones Agility\r\nColor del artículo: Tech Indigo / Signal Green / Glory Purple', 'Marca	Adidas\r\nModelo	Nemezis Messi 19.3\r\nTipo de suela	FG\r\nEdad	Adulto'),
 (19, 1, 6, 'Guantes Adidas', 'BearBox', 3000, 40, 1, 4, 6, 'Tomá el control del arco e interceptá tiros veloces con estos guantes de arquero. Su palma de látex ofrece un agarre insuperable para que puedas mantener un contacto firme con la pelota. La banda elástica y la tira alrededor de la muñeca te ofrecen la estabilidad necesaria para alejar la pelota de la zona de peligro.', 'Marca	Adidas\r\nLínea	Predator\r\nModelo	FH7295'),
-(20, 5, 6, 'Guantes Everlast', 'Classic', 3800, 1000, 1, 5, 6, 'Cuero sintético de alta calidad. Además de su excelente construcción, ofrece durabilidad y funcionalidad. Evercool asegura transpirabilidad y confort, mientras que su tecnología anti microbiano conserva la frescura, y extiende la vida de su equipamiento.\r\n\r\n- Thumblock: Mantiene el pulgar en la posición correcta y lo protege de lesiones\r\n- Doble costura: Asegura la durabilidad\r\n- Tira de ajuste y lazo en la muñeca: Proporciona un ajuste seguro y permite ponerlos y quitarlos rápidamente\r\n', 'Marca	Everlast\r\nLínea	TM GLV\r\nModelo	New Elite'),
-(25, 1, 9, 'MOUSE', 'HARPOON', 3000, 15, 0, 5, 10, 'holis', 'vvhhg');
+(20, 5, 6, 'Guantes Everlast', 'Classic', 3800, 1000, 1, 5, 6, 'Cuero sintético de alta calidad. Además de su excelente construcción, ofrece durabilidad y funcionalidad. Evercool asegura transpirabilidad y confort, mientras que su tecnología anti microbiano conserva la frescura, y extiende la vida de su equipamiento.\r\n\r\n- Thumblock: Mantiene el pulgar en la posición correcta y lo protege de lesiones\r\n- Doble costura: Asegura la durabilidad\r\n- Tira de ajuste y lazo en la muñeca: Proporciona un ajuste seguro y permite ponerlos y quitarlos rápidamente\r\n', 'Marca	Everlast\r\nLínea	TM GLV\r\nModelo	New Elite');
 
 -- --------------------------------------------------------
 
@@ -205,6 +229,12 @@ CREATE TABLE `productos_extra_info` (
 -- Indices de la tabla `categorias`
 --
 ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `clientes`
+--
+ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -266,7 +296,13 @@ ALTER TABLE `productos_extra_info`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `comentarios`
@@ -284,13 +320,13 @@ ALTER TABLE `comentario_campo_dinamico`
 -- AUTO_INCREMENT de la tabla `marcas`
 --
 ALTER TABLE `marcas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- Restricciones para tablas volcadas

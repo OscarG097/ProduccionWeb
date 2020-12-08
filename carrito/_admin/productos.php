@@ -42,11 +42,12 @@ require('inc/glob.php');
           </p>
           
 		  <h1 class="page-header">
-            <?php echo $productsMenu?>
+			<?php echo $productsMenu?>
+			<a href="productos_ae.php"><button type="button" class="btn btn-success" title="Agregar">Agregar nuevo Producto</button></a>
           </h1>
  
 
-          <h2 class="sub-header">Listado <a href="productos_ae.php"><button type="button" class="btn btn-success" title="Agregar">A</button></a></h2>
+          <h2 class="sub-header">Lista de productos a la venta</h2>
           <div class="table-responsive">
             <table class="table table-striped">
 				

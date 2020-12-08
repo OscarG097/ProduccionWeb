@@ -5,7 +5,7 @@ require('inc/glob.php');
 
 <div class="container-fluid">
       
-      <?php $CategoriaMenu = 'categorias';
+      <?php $CategoriaMenu = 'Categorias';
 	  
 	$categorias = new Categorias($con);
 	include('inc/side_bar.php');
@@ -44,11 +44,12 @@ require('inc/glob.php');
           </p>
           
 		  <h1 class="page-header">
-            <?php echo $CategoriaMenu?>
+			<?php echo $CategoriaMenu?>
+			<a href="Categorias_ae.php"><button type="button" class="btn btn-success" title="Agregar">Agregar nueva Categoria</button></a>
           </h1>
  
 
-          <h2 class="sub-header">Listado <a href="Categorias_ae.php"><button type="button" class="btn btn-success" title="Agregar">A</button></a></h2>
+          <h2 class="sub-header">Listado </h2>
           <div class="table-responsive">
             <table class="table table-striped">
 				

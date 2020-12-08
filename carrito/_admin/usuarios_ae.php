@@ -14,7 +14,7 @@ require('inc/header.php');
 				header('Location: index.php');
 			}
 	
-	$perfil = new Perfil($con); 
+	$usuario = new Usuario($con); 
 	
 	if(isset($_GET['edit'])){
             $usuario = $user->get($_GET['edit']); 

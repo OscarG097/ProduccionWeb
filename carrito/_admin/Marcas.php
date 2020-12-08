@@ -5,7 +5,7 @@ require('inc/glob.php');
 
 <div class="container-fluid">
       
-      <?php $marcasMenu = 'marcas';
+      <?php $marcasMenu = 'Marcas';
 	  
 	$marcas = new Marcas($con);
 	include('inc/side_bar.php');
@@ -44,11 +44,12 @@ require('inc/glob.php');
           </p>
           
 		  <h1 class="page-header">
-            <?php echo $marcasMenu?>
+			<?php echo $marcasMenu?>
+			<a href="Marcas_ae.php"><button type="button" class="btn btn-success" title="Agregar">Agregar nueva marca</button></a>
           </h1>
  
 
-          <h2 class="sub-header">Listado <a href="Marcas_ae.php"><button type="button" class="btn btn-success" title="Agregar">A</button></a></h2>
+          <h2 class="sub-header">Listado</h2>
           <div class="table-responsive">
             <table class="table table-striped">
 				
@@ -76,7 +77,7 @@ require('inc/glob.php');
 						<td><?php echo $mar['nombre']?></td>
 						<td>
 						<a href="Marcas_ae.php?edit=<?php echo $mar['id']?>"><button type="button" class="btn btn-info" title="Modificar">Modificar</button></a>
-							  <a href="Marcas_ae.php?del=<?php echo $mar['id']?>"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
+							  <a href="Marcas.php?del=<?php echo $mar['id']?>"><button type="button" class="btn btn-danger" title="Borrar">Borrar</button></a>
 						</td>
 					  </tr>         
 			</tbody>

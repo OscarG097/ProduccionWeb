@@ -10,7 +10,7 @@ class Productos{
 
     public function getProductos($filtro = array()){
 
-        $query = "SELECT * FROM productos " ;
+        $query = "SELECT * FROM productos" ;
 
         $where = array();
 
@@ -56,10 +56,12 @@ class Productos{
             $query .= ' ORDER BY destacado ASC';
         }
 
+    
 
         return $this->con->query($query);
     }
 
+   
     public function getProductosHomeRandom(){
         return $this->con->query("SELECT * FROM productos ORDER BY rand() LIMIT 12");
     }
@@ -68,4 +70,10 @@ class Productos{
         return $this->con->query("SELECT * FROM productos ORDER BY rand() LIMIT 4");
 
     }
+    public function getProductosmayorvaloracion(){
+        return $this->con->query("SELECT * FROM productos ORDER BY rand() LIMIT 12");
+    }
+
+ 
+
 }

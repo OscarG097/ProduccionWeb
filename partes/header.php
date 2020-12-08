@@ -1,6 +1,17 @@
-<?php
+<?php 
+
+ini_set("session.cookie_lifetime","7200");
+ini_set("session.gc_maxlifetime","7200");  
+session_id("sessionID");
+session_start(); //hay problemas con la sesion se pisan la de abm y glob
+
+
+
+
 require_once('partes/db_con.php');
 require_once('clases/productos.php');
+require_once('clases/comentarios.php');
+require_once('clases/clientes.php');
 
 try {        
 	$con = new PDO('mysql:host='.$hostname.';dbname='.$database.';port='.$puerto, $username, $password);
@@ -11,6 +22,21 @@ catch (PDOException $e) {
 }
 
 $Productos = new Productos($con);
+
+$cliente = new Clientes($con);
+
+if(isset($_POST['login'])){
+	$cliente->login($_POST);
+}
+ 
+if(isset($_GET['logout'])){
+    unset($_SESSION['usuario']); 
+}
+	 
+if($cliente->notLogged()){
+  header('Location: login.php');
+}
+
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -22,6 +48,7 @@ $Productos = new Productos($con);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GLOB | FC</title>
     <link rel="shortcut icon" href="img/logo-glob.png"/>  
+
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->

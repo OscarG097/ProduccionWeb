@@ -1,4 +1,5 @@
 <!-- Menu superior empieza -->
+<?php //include('header.php'); ?>
 <header class="header">
         <div class="header__top">
             <div class="container">
@@ -6,6 +7,8 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
                             <ul>
+                                <li> <a class="navbar-brand" href="#">Hola <?php echo $_SESSION['usuario']['nombre']?></a></li>
+                                <li><a href="?logout">Logout</a></li>
                                 <li><i class="fa fa-envelope"></i>glob.info@gmail.com</li>
                                 <li>Envío gratis a todo el país para compras superiores a $2500</li>
                             </ul>

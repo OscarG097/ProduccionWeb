@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-12-2020 a las 20:59:48
+-- Tiempo de generación: 08-12-2020 a las 01:54:47
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.2.34
 
@@ -50,6 +50,57 @@ INSERT INTO `categorias` (`id`, `nombre`, `padre_id`) VALUES
 (12, 'ojotas ', 1),
 (13, 'Medias', 10),
 (14, 'Llaveros', 6);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentarios`
+--
+
+CREATE TABLE `comentarios` (
+  `id` int(11) NOT NULL,
+  `mail` varchar(50) NOT NULL,
+  `comentario` text NOT NULL,
+  `ip` varchar(20) NOT NULL,
+  `fecha` datetime NOT NULL DEFAULT current_timestamp(),
+  `estado` int(11) NOT NULL,
+  `id_producto` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentario_campo_comentario`
+--
+
+CREATE TABLE `comentario_campo_comentario` (
+  `comentario_id` int(11) NOT NULL,
+  `campo_id` int(11) NOT NULL,
+  `valor_ingresado` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentario_campo_dinamico`
+--
+
+CREATE TABLE `comentario_campo_dinamico` (
+  `id_campo` int(11) NOT NULL,
+  `label` varchar(50) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `opcion` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `comentario_campo_dinamico`
+--
+
+INSERT INTO `comentario_campo_dinamico` (`id_campo`, `label`, `type`, `opcion`) VALUES
+(1, 'Color', 'select', 'amarillo/azul/rojo'),
+(4, 'Te gusto?', 'checkbox', 'si/no'),
+(6, 'Usado', 'checkbox', 'si/no'),
+(8, 'modelo', 'input', NULL);
 
 -- --------------------------------------------------------
 
@@ -122,6 +173,30 @@ INSERT INTO `productos` (`id`, `marca_id`, `categoria_id`, `nombre`, `modelo`, `
 (20, 5, 6, 'Guantes Everlast', 'Classic', 3800, 1000, 1, 5, 6, 'Cuero sintético de alta calidad. Además de su excelente construcción, ofrece durabilidad y funcionalidad. Evercool asegura transpirabilidad y confort, mientras que su tecnología anti microbiano conserva la frescura, y extiende la vida de su equipamiento.\r\n\r\n- Thumblock: Mantiene el pulgar en la posición correcta y lo protege de lesiones\r\n- Doble costura: Asegura la durabilidad\r\n- Tira de ajuste y lazo en la muñeca: Proporciona un ajuste seguro y permite ponerlos y quitarlos rápidamente\r\n', 'Marca	Everlast\r\nLínea	TM GLV\r\nModelo	New Elite'),
 (25, 1, 9, 'MOUSE', 'HARPOON', 3000, 15, 0, 5, 10, 'holis', 'vvhhg');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `productos_comentario_dinamicos`
+--
+
+CREATE TABLE `productos_comentario_dinamicos` (
+  `producto_id` int(11) NOT NULL,
+  `campo_dinamico_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `productos_extra_info`
+--
+
+CREATE TABLE `productos_extra_info` (
+  `id` int(11) NOT NULL,
+  `producto_id` int(11) NOT NULL,
+  `label` varchar(50) NOT NULL,
+  `text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Índices para tablas volcadas
 --
@@ -131,6 +206,27 @@ INSERT INTO `productos` (`id`, `marca_id`, `categoria_id`, `nombre`, `modelo`, `
 --
 ALTER TABLE `categorias`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_producto` (`id_producto`);
+
+--
+-- Indices de la tabla `comentario_campo_comentario`
+--
+ALTER TABLE `comentario_campo_comentario`
+  ADD PRIMARY KEY (`comentario_id`),
+  ADD KEY `comentario_id` (`comentario_id`),
+  ADD KEY `campo_id` (`campo_id`);
+
+--
+-- Indices de la tabla `comentario_campo_dinamico`
+--
+ALTER TABLE `comentario_campo_dinamico`
+  ADD PRIMARY KEY (`id_campo`);
 
 --
 -- Indices de la tabla `marcas`
@@ -148,6 +244,21 @@ ALTER TABLE `productos`
   ADD KEY `sub_categoria` (`sub_categoria`);
 
 --
+-- Indices de la tabla `productos_comentario_dinamicos`
+--
+ALTER TABLE `productos_comentario_dinamicos`
+  ADD PRIMARY KEY (`producto_id`),
+  ADD KEY `producto_id` (`producto_id`),
+  ADD KEY `campo_dinamico_id` (`campo_dinamico_id`);
+
+--
+-- Indices de la tabla `productos_extra_info`
+--
+ALTER TABLE `productos_extra_info`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `producto_id` (`producto_id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -156,6 +267,18 @@ ALTER TABLE `productos`
 --
 ALTER TABLE `categorias`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `comentario_campo_dinamico`
+--
+ALTER TABLE `comentario_campo_dinamico`
+  MODIFY `id_campo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `marcas`
@@ -174,12 +297,38 @@ ALTER TABLE `productos`
 --
 
 --
+-- Filtros para la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `comentario_campo_comentario`
+--
+ALTER TABLE `comentario_campo_comentario`
+  ADD CONSTRAINT `comentario_campo_comentario_ibfk_1` FOREIGN KEY (`comentario_id`) REFERENCES `comentarios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `comentario_campo_comentario_ibfk_2` FOREIGN KEY (`campo_id`) REFERENCES `comentario_campo_dinamico` (`id_campo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Filtros para la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`marca_id`) REFERENCES `marcas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `productos_ibfk_3` FOREIGN KEY (`sub_categoria`) REFERENCES `categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `productos_comentario_dinamicos`
+--
+ALTER TABLE `productos_comentario_dinamicos`
+  ADD CONSTRAINT `productos_comentario_dinamicos_ibfk_1` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `productos_comentario_dinamicos_ibfk_2` FOREIGN KEY (`campo_dinamico_id`) REFERENCES `comentario_campo_dinamico` (`id_campo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `productos_extra_info`
+--
+ALTER TABLE `productos_extra_info`
+  ADD CONSTRAINT `productos_extra_info_ibfk_1` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

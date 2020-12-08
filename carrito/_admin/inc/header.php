@@ -7,6 +7,7 @@ include('clases/perfil.php');
 include('clases/productos.php');
 include('clases/categorias.php');
 include('clases/marcas.php');
+include('clases/clientes.php');
 
 
 
